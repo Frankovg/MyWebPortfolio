@@ -1,0 +1,77 @@
+@import "../../variables";
+
+.banner {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  height: 100vh;
+  .tagline {
+    @include repeatedProperty3;
+    padding: 8px 10px;
+    background: $gradient;
+    border: $border-grey;
+    font-size: $font-size-20;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  h1 {
+    font-size: 65px;
+    @include repeatedProperty3;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+  }
+  p {
+    @include parrafo;
+    width: 96%;
+  }
+  button {
+    color: #fff;
+    font-weight: 700;
+    font-size: $font-size-20;
+    margin-top: 60px;
+    letter-spacing: $letter-spacing-08;
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: 25px;
+      margin-left: 10px;
+      @include transition;
+      line-height: 1;
+    }
+  }
+  button:hover {
+    svg {
+      margin-left: 25px;
+    }
+  }
+  .ship {
+    animation: updown 3s linear infinite;
+  }
+  @keyframes updown {
+    0% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+.arrow-down {
+  text-align: center;
+  padding-top: 20vh;
+  img {
+    width: 2rem;
+    @include transition;
+  }
+  img:hover {
+    margin-top: 6px;
+  }
+}

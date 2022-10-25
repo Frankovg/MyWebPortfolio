@@ -1,0 +1,59 @@
+$font-size-20: 20px;
+$border-grey: 1px solid rgba(255, 255, 255, 0.5);
+$letter-spacing-08: 0.8px;
+$grey: #b8b8b8;
+$darkgrey: rgb(36, 36, 36);
+$grey-transp: rgb(217, 217, 217, 0.1);
+$cyanLogo: #5cedc2;
+$purpleLogo: #e453bc;
+$cyanLogoFilter: brightness(0) saturate(100%) invert(94%) sepia(7%)
+  saturate(3213%) hue-rotate(93deg) brightness(100%) contrast(94%);
+$gradient: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+
+@mixin zeroStart {
+  margin: 0;
+  padding: 0;
+}
+@mixin iconSize {
+  width: 42px;
+  height: 42px;
+}
+@mixin transition {
+  transition: 0.3s ease-in-out;
+}
+@mixin transition-icon {
+  transition: all 300ms linear;
+}
+@mixin repeatedProperty {
+  background-color: $cyanLogo;
+  top: 0;
+  left: 0;
+}
+@mixin repeatedProperty2 {
+  background-color: #fff;
+  height: 2px;
+}
+@mixin repeatedProperty3 {
+  font-weight: 700;
+  letter-spacing: 0.8;
+}
+@mixin parrafo {
+  color: $grey;
+  font-size: 18px;
+  letter-spacing: $letter-spacing-08;
+  line-height: 1.5em;
+}
+
+// MEDIA QUERYs
+
+@mixin min-large {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin max-extralarge {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}

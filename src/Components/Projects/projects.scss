@@ -1,0 +1,77 @@
+@import "../../variables";
+
+.project {
+  padding: 5px 0;
+  //   z-index: -1;
+  position: relative;
+  //   background-color: black;
+  h2 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+  }
+  p {
+    @include parrafo;
+    margin: 14px auto 30px auto;
+    text-align: center;
+    width: 56%;
+  }
+  .nav.nav-pills {
+    width: 72%;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: $grey-transp;
+    overflow: hidden;
+    .nav-item {
+      width: 33.33333%;
+    }
+    .nav-link {
+      background-color: transparent;
+      border-radius: 0;
+      padding: 17px 0;
+      color: #fff;
+      width: 100%;
+      font-size: 17px;
+      letter-spacing: $letter-spacing-08;
+      font-weight: 500;
+      position: relative;
+      @include transition;
+      text-align: center;
+      z-index: 0;
+    }
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background: white;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      @include transition;
+    }
+    .nav-link.active::before {
+      width: 100% !important;
+    }
+    .nav-link.active {
+      border: 1px solid rgba(255, 255, 255, 1);
+      color: black !important;
+      font-weight: 700 !important;
+    }
+  }
+}
+
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 25px 0px 0px 25px;
+}
+
+.nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-link#projects-tabs-tab-third {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0px 25px 25px 0px;
+}

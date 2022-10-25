@@ -1,0 +1,131 @@
+@import "../../variables";
+
+.tech-stack {
+  margin: 0 0 120px 0;
+  position: relative;
+  .tech-bx {
+    h2 {
+      font-size: 45px;
+      font-weight: 700;
+    }
+    p {
+      @include parrafo;
+      margin: 14px 0 50px 0;
+    }
+    .tech-group {
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      border-inline: 1px solid white;
+      div {
+        display: flex;
+        justify-content: center;
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+      }
+      @include max-extralarge {
+        .agile-title {
+          h4 {
+            font-size: 1.2rem !important;
+          }
+        }
+      }
+    }
+    .up-lg {
+      display: none !important;
+    }
+    @include min-large {
+      .down-lg {
+        display: none !important;
+      }
+      .up-lg {
+        display: flex !important;
+      }
+      .top {
+        border-bottom: 1px solid transparent !important;
+      }
+      .center {
+        border-block: 1px solid transparent !important;
+      }
+      .bottom {
+        border-top: 1px solid transparent !important;
+      }
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+    img {
+      width: 65%;
+      position: relative;
+      @include transition-icon;
+      //   transition: 0.8s ease-in-out;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    .reactH:hover {
+      filter: brightness(0) saturate(100%) invert(72%) sepia(35%) saturate(778%)
+        hue-rotate(160deg) brightness(102%) contrast(97%);
+    }
+    .htmlH:hover {
+      filter: brightness(0) saturate(100%) invert(39%) sepia(100%)
+        saturate(636%) hue-rotate(333deg) brightness(87%) contrast(107%);
+    }
+    .cssH:hover {
+      filter: brightness(0) saturate(100%) invert(22%) sepia(90%)
+        saturate(5247%) hue-rotate(231deg) brightness(94%) contrast(89%);
+    }
+    .jsH:hover {
+      filter: brightness(0) saturate(100%) invert(94%) sepia(75%) saturate(768%)
+        hue-rotate(337deg) brightness(97%) contrast(94%);
+    }
+    .tsH:hover {
+      filter: brightness(0) saturate(100%) invert(30%) sepia(100%)
+        saturate(1005%) hue-rotate(177deg) brightness(100%) contrast(106%);
+    }
+    .reduxH:hover {
+      filter: brightness(0) saturate(100%) invert(29%) sepia(12%)
+        saturate(6975%) hue-rotate(238deg) brightness(102%) contrast(87%);
+    }
+    .sassH:hover {
+      filter: brightness(0) saturate(100%) invert(66%) sepia(53%)
+        saturate(3044%) hue-rotate(295deg) brightness(87%) contrast(85%);
+    }
+    .bootH:hover {
+      filter: brightness(0) saturate(100%) invert(11%) sepia(100%)
+        saturate(6411%) hue-rotate(266deg) brightness(93%) contrast(104%);
+    }
+    .nodeH:hover {
+      filter: brightness(0) saturate(100%) invert(57%) sepia(11%)
+        saturate(1528%) hue-rotate(68deg) brightness(98%) contrast(79%);
+    }
+    .expH:hover {
+      filter: $cyanLogoFilter;
+    }
+    .sqlH:hover {
+      filter: brightness(0) saturate(100%) invert(55%) sepia(79%) saturate(550%)
+        hue-rotate(354deg) brightness(99%) contrast(92%);
+    }
+    .psH:hover {
+      filter: brightness(0) saturate(100%) invert(54%) sepia(27%)
+        saturate(3640%) hue-rotate(184deg) brightness(104%) contrast(101%);
+    }
+    .aiH:hover {
+      filter: brightness(0) saturate(100%) invert(52%) sepia(77%)
+        saturate(1154%) hue-rotate(2deg) brightness(108%) contrast(106%);
+    }
+    .figH:hover {
+      filter: brightness(0) saturate(100%) invert(53%) sepia(96%) saturate(886%)
+        hue-rotate(113deg) brightness(98%) contrast(92%);
+    }
+    .gitH:hover {
+      filter: brightness(0) saturate(100%) invert(38%) sepia(25%)
+        saturate(4133%) hue-rotate(342deg) brightness(90%) contrast(101%);
+    }
+    .githubH:hover {
+      filter: $cyanLogoFilter;
+    }
+    .scrumH:hover {
+      filter: $cyanLogoFilter;
+    }
+  }
+}

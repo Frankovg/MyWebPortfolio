@@ -1,0 +1,56 @@
+@import "../../../variables";
+
+.modal-content {
+  background-color: $darkgrey !important;
+  border: 2px solid $cyanLogo !important;
+}
+
+.modal-header {
+  border-bottom: none !important;
+  padding-bottom: 0px !important;
+  .btn-close {
+    filter: $cyanLogoFilter !important;
+    margin: -8px !important;
+  }
+  div {
+    letter-spacing: $letter-spacing-08;
+  }
+}
+
+.modal-body {
+  padding-top: 0px !important;
+  img {
+    width: 1.3rem;
+  }
+  p {
+    letter-spacing: $letter-spacing-08;
+  }
+  .info-text {
+    font-size: $font-size-20;
+  }
+}
+
+.carousel-control-next-icon {
+  background-image: url("../../../assets/icons/arrow_right.svg") !important;
+}
+.carousel-control-prev-icon {
+  background-image: url("../../../assets/icons/arrow_left.svg") !important;
+}
+.carousel-indicators {
+  display: none !important;
+}
+
+.modal-footer {
+  border-top: none !important;
+  padding-block: 0px !important;
+  display: flex;
+  justify-content: center;
+  .span-bx {
+    border-top: 1px solid $purpleLogo;
+    span {
+      font-family: "Chathura", sans-serif !important;
+      font-size: 1.7rem;
+      margin: 0px;
+    }
+  }
+}
