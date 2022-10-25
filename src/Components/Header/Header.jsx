@@ -6,6 +6,7 @@ import ship from "../../assets/ship/ship.svg";
 import arrowDown from "../../assets/icons/arrow_down.svg";
 import "animate.css";
 import "./header.scss";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -19,6 +20,8 @@ export const Header = () => {
     "Industrial Designer",
   ];
   const period = 2000;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -86,9 +89,9 @@ export const Header = () => {
                     suscipit cum doloremque id consectetur minima libero eveniet
                     temporibus tempore.
                   </p>
-                  <button onClick={() => console.log("connect")}>
+                  <a className="toConnect" href="#connect">
                     Let's connect <ArrowRightCircle size={25} />
-                  </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
