@@ -2,7 +2,7 @@
 
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 25vh 0 10vh 0;
   height: 100vh;
   .tagline {
     @include repeatedProperty3;
@@ -19,10 +19,20 @@
     line-height: 1;
     margin-bottom: 20px;
     display: block;
+    // @include max-extralarge {
+    //   font-size: 45px;
+    // }
+    @include screen-1400 {
+      font-size: 50px;
+    }
   }
   p {
     @include parrafo;
     width: 96%;
+    max-width: 576px;
+    @include screen-1400 {
+      font-size: 1rem;
+    }
   }
   .toConnect {
     color: #fff;
@@ -66,12 +76,15 @@
 
 .arrow-down {
   text-align: center;
-  padding-top: 20vh;
+  padding-top: 10%;
   img {
     width: 2rem;
     @include transition;
   }
   img:hover {
     margin-top: 6px;
+  }
+  @include max-700-H {
+    display: none !important;
   }
 }

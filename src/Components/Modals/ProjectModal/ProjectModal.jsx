@@ -23,7 +23,7 @@ export const ProjectModal = ({ project, show, onHide }) => {
     stack,
   } = project;
 
-  console.log("pictures: ", pictures);
+  // console.log("pictures: ", pictures);
 
   return (
     <Modal
@@ -76,7 +76,7 @@ export const ProjectModal = ({ project, show, onHide }) => {
             <Col>
               <Carousel fade>
                 {pictures?.map((img, index) => {
-                  console.log("una sola ", img);
+                  // console.log("una sola ", img);
                   return (
                     <Carousel.Item key={index}>
                       <img

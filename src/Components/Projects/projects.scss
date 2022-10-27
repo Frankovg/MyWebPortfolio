@@ -15,6 +15,10 @@
     margin: 14px auto 30px auto;
     text-align: center;
     width: 56%;
+    max-width: 600px;
+    @include screen-1400 {
+      font-size: 1rem;
+    }
   }
   .nav.nav-pills {
     width: 72%;

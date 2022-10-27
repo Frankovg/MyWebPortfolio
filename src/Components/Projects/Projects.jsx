@@ -21,9 +21,8 @@ export const Projects = () => {
                 >
                   <h2>Projects</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Doloremque accusantium nihil praesentium explicabo pariatur.
-                    Rem, natus sunt temporibus.
+                    A short exploration of my present as a Web Developer and my
+                    past as a Designer.
                   </p>
                 </div>
               )}

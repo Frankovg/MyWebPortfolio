@@ -35,22 +35,35 @@
       color: $grey;
       opacity: 0.5;
     }
-    button {
-      font-weight: 700;
-      color: #000;
+    // button {
+    //   font-weight: 700;
+    //   padding: 14px 48px;
+    //   font-size: 18px;
+    //   margin-top: 25px;
+    //   border-radius: 0;
+    //   position: relative;
+    //   color: #000;
+    //   span {
+    //     z-index: 1;
+    //     position: relative;
+    //   }
+    // }
+    .send-btn {
       background-color: #fff;
+      @include transition;
+      font-weight: 700;
       padding: 14px 48px;
       font-size: 18px;
       margin-top: 25px;
       border-radius: 0;
       position: relative;
-      @include transition;
+      color: #000;
       span {
         z-index: 1;
         position: relative;
       }
     }
-    button::before {
+    .send-btn::before {
       content: "";
       background: $cyanLogo;
       width: 0;
@@ -61,8 +74,25 @@
       z-index: 0;
       @include transition;
     }
-    button:hover::before {
+    .send-btn:hover::before {
       width: 100%;
     }
+    .thanks-btn {
+      background-color: $cyanLogo !important;
+      font-weight: 700;
+      padding: 14px 48px;
+      font-size: 18px;
+      margin-top: 25px;
+      border-radius: 0;
+      position: relative;
+      color: #000;
+      span {
+        z-index: 1;
+        position: relative;
+      }
+    }
   }
+}
+.please {
+  color: orange;
 }

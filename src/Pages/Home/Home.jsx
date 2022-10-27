@@ -1,5 +1,6 @@
 import React from "react";
 import { Contact } from "../../Components/Contact/Contact";
+import { Footer } from "../../Components/Footer/Footer";
 import { Header } from "../../Components/Header/Header";
 import { Projects } from "../../Components/Projects/Projects";
 import { Tech } from "../../Components/Tech/Tech";
@@ -12,6 +13,7 @@ export const Home = () => {
       <Tech />
       <Projects />
       <Contact />
+      <Footer />
     </>
   );
 };
