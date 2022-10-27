@@ -6,7 +6,6 @@ import ship from "../../assets/ship/ship.svg";
 import arrowDown from "../../assets/icons/arrow_down.svg";
 import "animate.css";
 import "./header.scss";
-import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -17,11 +16,11 @@ export const Header = () => {
   const toRotate = [
     "Front-end Developer",
     "UX/UI Designer",
+    "Full-Stack Web Dev",
     "Industrial Designer",
+    "Web Developer",
   ];
-  const period = 2000;
-
-  const navigate = useNavigate();
+  const period = 1500;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -54,7 +53,7 @@ export const Header = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(300);
+      setDelta(100);
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
@@ -62,9 +61,9 @@ export const Header = () => {
 
   return (
     <section className="banner" id="home">
-      <Container className="h-100">
+      <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={6} lg={7}>
             <TrackVisibility once>
               {({ isVisible }) => (
                 <div
@@ -77,17 +76,18 @@ export const Header = () => {
                     {`Hi, I'm Franco`} <br />
                     <span
                       className="txt-rotate"
-                      data-period="1000"
-                      data-rotate='["Front-end Developer", "UX/UI Designer", "Industrial Designer"]'
+                      data-period={period}
+                      data-rotate={toRotate}
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-                    sapiente? Quam, nulla eaque iste, repudiandae beatae numquam
-                    suscipit cum doloremque id consectetur minima libero eveniet
-                    temporibus tempore.
+                    My current focus is developing web apps especially on the
+                    Front-end. My background is an Industrial Designer and I
+                    have a solid expertise working for big companies around the
+                    world. <br /> I hope you enjoy this trip I have made for you
+                    and feel free to contact me.
                   </p>
                   <a className="toConnect" href="#connect">
                     Let's connect <ArrowRightCircle size={25} />
@@ -97,7 +97,7 @@ export const Header = () => {
             </TrackVisibility>
           </Col>
 
-          <Col xs={12} md={6} xl={5} className="d-flex align-items-start">
+          <Col xs={12} md={6} lg={5} className="d-flex align-items-start">
             <TrackVisibility once>
               {({ isVisible }) => (
                 <div

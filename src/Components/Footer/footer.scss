@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.footer {
+  padding: 0 0 50px 0;
+  .logo-footer {
+    width: 10rem;
+  }
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: $grey;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+  }
+}

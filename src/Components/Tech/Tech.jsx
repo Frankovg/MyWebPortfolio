@@ -120,17 +120,16 @@ export const Tech = () => {
             <Col className="text-center">
               <h2>Tech Stack</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias rem ipsum blanditiis eum quidem.<br></br> Lorem Ipsum
-                has been the industry's standard dummy text.
+                The following technologies are the most demanded at the moment.
+                I like to be updated and keep growing and learning.
               </p>
             </Col>
           </Row>
 
           <Row>
             {/* LEFT BLOCK ** DOWN-LG *****************************  */}
-            <Col xs={12} lg={6}>
-              <Row className="tech-group h-100 down-lg">
+            <Col xs={12} xl={6}>
+              <Row className="tech-group down-lg">
                 <Col sm={12} className="text-center">
                   <h4>Front-end</h4>
                 </Col>
@@ -309,7 +308,7 @@ export const Tech = () => {
             </Col>
 
             {/* RIGHT BLOCK ***************************** */}
-            <Col xs={12} lg={6}>
+            <Col xs={12} xl={6}>
               <Row className="tech-group">
                 <Col sm={12} className="text-center">
                   <h4>Back-end</h4>

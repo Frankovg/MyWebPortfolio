@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import TrackVisibility from "react-on-screen";
 import planet from "../../assets/ship/planet.svg";
+import SendCustomEmail from "../../SendCustomEmail";
+import validator from "validator";
 import "animate.css";
 import "./contact.scss";
 
@@ -13,35 +15,39 @@ const formInitialDetails = {
 
 export const Contact = () => {
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-
-    if (result.code === 200) {
-      setStatus({ success: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        success: false,
-        message: "Something went wrong, please try again later.",
-      });
-    }
-  };
 
   const onFormUpdate = (category, value) => {
     setFormDetails({ ...formDetails, [category]: value });
+
+    if (
+      formDetails.fullName !== "" &&
+      validator.isEmail(formDetails.email) === true &&
+      formDetails.message !== ""
+    ) {
+      setStatus({});
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { fullName, email, message } = formDetails;
+
+    if (
+      fullName !== "" &&
+      validator.isEmail(email) === true &&
+      message !== ""
+    ) {
+      SendCustomEmail(email, fullName, message);
+      setFormDetails(formInitialDetails);
+      setStatus({
+        success: true,
+        message: "I will get back to you as soon as posible",
+      });
+    } else {
+      setStatus({ success: false, message: "Please complete ALL items." });
+    }
   };
 
   return (
@@ -76,9 +82,9 @@ export const Contact = () => {
                         <input
                           type="text"
                           value={formDetails.fullName}
-                          placeholder="Full name"
+                          placeholder="*Full name"
                           onChange={(e) =>
-                            onFormUpdate("firstName", e.target.value)
+                            onFormUpdate("fullName", e.target.value)
                           }
                         />
                       </Col>
@@ -87,32 +93,42 @@ export const Contact = () => {
                         <input
                           type="email"
                           value={formDetails.email}
-                          placeholder="Email address"
+                          placeholder="*Email address"
                           onChange={(e) =>
                             onFormUpdate("email", e.target.value)
                           }
                         />
                       </Col>
 
-                      <Col className="px-1">
+                      <Col sm={12} className="px-1">
                         <textarea
                           rows="6"
                           value={formDetails.message}
-                          placeholder="Message"
+                          placeholder="*Message"
                           onChange={(e) =>
                             onFormUpdate("message", e.target.value)
                           }
                         ></textarea>
-                        <button type="submit">
-                          <span>{buttonText}</span>
-                        </button>
                       </Col>
+
+                      <Col sm={3} className="px-1">
+                        {status.success !== true ? (
+                          <button className="send-btn" type="submit">
+                            <span>Send</span>
+                          </button>
+                        ) : (
+                          <button className="thanks-btn">
+                            <span>Thanks</span>
+                          </button>
+                        )}
+                      </Col>
+
                       {status.message && (
-                        <Col>
+                        <Col sm={9} className="d-flex align-items-end">
                           <p
-                            className={
-                              status.success === false ? "danger" : "success"
-                            }
+                            className={`pb-3 ${
+                              status.success !== true ? "please" : "light"
+                            }`}
                           >
                             {status.message}
                           </p>
