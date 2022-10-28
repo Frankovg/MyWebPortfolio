@@ -6,8 +6,16 @@
   overflow: hidden;
   margin-bottom: 24px;
   height: 25vh;
+  max-height: 265px;
   object-fit: cover;
   object-position: center;
+  // @include max-700-H {
+  //   height: 40vh;
+  // }
+  @include max-1200-H {
+    height: 40vh;
+    max-height: 227px !important;
+  }
   .proj-txtx {
     position: absolute;
     text-align: center;

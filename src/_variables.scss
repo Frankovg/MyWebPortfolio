@@ -58,6 +58,12 @@ $gradient: linear-gradient(90.21deg, #aa367c -5.91%, #092db2 111.58%);
   }
 }
 
+@mixin max-1200-H {
+  @media only screen and (max-height: 1200px) {
+    @content;
+  }
+}
+
 @mixin min-extralarge {
   @media only screen and (min-width: 1200px) {
     @content;

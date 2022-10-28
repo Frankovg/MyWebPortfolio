@@ -10,7 +10,7 @@ export const ProjectCard = ({ project }) => {
 
   return (
     <>
-      <Col size={12} sm={6} md={4}>
+      <Col sm={6} xl={4}>
         <div className="proj-imgbx">
           <img src={imgUrl} alt="Project poster" />
           <div className="proj-txtx d-flex flex-column align-items-center">
