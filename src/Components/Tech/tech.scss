@@ -26,13 +26,13 @@
         padding-top: 0.5rem;
         padding-bottom: 1rem;
       }
-      @include max-extralarge {
-        .agile-title {
-          h4 {
-            font-size: 1.2rem !important;
-          }
-        }
-      }
+      // @include max-extralarge {
+      //   .agile-title {
+      //     h4 {
+      //       font-size: 1.2rem !important;
+      //     }
+      //   }
+      // }
     }
     .up-lg {
       display: none !important;
@@ -61,13 +61,33 @@
       width: 65%;
       position: relative;
       @include transition-icon;
-      //   transition: 0.8s ease-in-out;
       @include max-large-H {
         width: 50%;
       }
     }
     img:hover {
       transform: scale(1.05);
+    }
+    .gitH,
+    .githubH {
+      @include max-extralarge {
+        width: 45% !important;
+      }
+    }
+    .scrumH {
+      @include max-extralarge {
+        width: 20% !important;
+      }
+    }
+    .nodeH,
+    .expH,
+    .sqlH,
+    .psH,
+    .aiH,
+    .figH {
+      @include max-extralarge {
+        width: 70%;
+      }
     }
     .reactH:hover {
       filter: brightness(0) saturate(100%) invert(72%) sepia(35%) saturate(778%)
