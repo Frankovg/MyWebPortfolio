@@ -133,7 +133,7 @@ export const Tech = () => {
                 <Col sm={12} className="text-center">
                   <h4>Front-end</h4>
                 </Col>
-                <Col sm={3}>
+                <Col xs={4} sm={3}>
                   <OverlayTrigger
                     placement="right"
                     delay={{ show: 100, hide: 100 }}
@@ -142,16 +142,16 @@ export const Tech = () => {
                     <img src={reactIcon} alt="React logo" className="reactH" />
                   </OverlayTrigger>
                 </Col>
-                <Col sm={3}>
+                <Col xs={4} sm={3}>
                   <OverlayTrigger
-                    placement="right"
+                    placement="bottom"
                     delay={{ show: 100, hide: 100 }}
                     overlay={renderTooltipHTML}
                   >
                     <img src={htmlIcon} alt="HTML logo" className="htmlH" />
                   </OverlayTrigger>
                 </Col>
-                <Col sm={3}>
+                <Col xs={4} sm={3}>
                   <OverlayTrigger
                     placement="left"
                     delay={{ show: 100, hide: 100 }}
@@ -160,7 +160,7 @@ export const Tech = () => {
                     <img src={cssIcon} alt="CSS logo" className="cssH" />
                   </OverlayTrigger>
                 </Col>
-                <Col sm={3}>
+                <Col xs={4} sm={3}>
                   <OverlayTrigger
                     placement="right"
                     delay={{ show: 100, hide: 100 }}
@@ -169,16 +169,16 @@ export const Tech = () => {
                     <img src={jsIcon} alt="JavaScript logo" className="jsH" />
                   </OverlayTrigger>
                 </Col>
-                <Col sm={3}>
+                <Col xs={4} sm={3}>
                   <OverlayTrigger
-                    placement="right"
+                    placement="bottom"
                     delay={{ show: 100, hide: 100 }}
                     overlay={renderTooltipTs}
                   >
                     <img src={tsIcon} alt="TypeScript logo" className="tsH" />
                   </OverlayTrigger>
                 </Col>
-                <Col sm={3}>
+                <Col xs={4} sm={3}>
                   <OverlayTrigger
                     placement="left"
                     delay={{ show: 100, hide: 100 }}
@@ -187,7 +187,7 @@ export const Tech = () => {
                     <img src={reduxIcon} alt="Redux logo" className="reduxH" />
                   </OverlayTrigger>
                 </Col>
-                <Col sm={3}>
+                <Col xs={4} sm={3}>
                   <OverlayTrigger
                     placement="right"
                     delay={{ show: 100, hide: 100 }}
@@ -196,9 +196,9 @@ export const Tech = () => {
                     <img src={sassIcon} alt="Sass logo" className="sassH" />
                   </OverlayTrigger>
                 </Col>
-                <Col sm={3}>
+                <Col xs={4} sm={3}>
                   <OverlayTrigger
-                    placement="right"
+                    placement="bottom"
                     delay={{ show: 100, hide: 100 }}
                     overlay={renderTooltipBoot}
                   >
@@ -315,7 +315,7 @@ export const Tech = () => {
                     <Col sm={12} className="text-center">
                       <h4>Back-end</h4>
                     </Col>
-                    <Col sm={4}>
+                    <Col xs={4} sm={4}>
                       <OverlayTrigger
                         placement="right"
                         delay={{ show: 100, hide: 100 }}
@@ -328,9 +328,9 @@ export const Tech = () => {
                         />
                       </OverlayTrigger>
                     </Col>
-                    <Col sm={4}>
+                    <Col xs={4} sm={4}>
                       <OverlayTrigger
-                        placement="right"
+                        placement="bottom"
                         delay={{ show: 100, hide: 100 }}
                         overlay={renderTooltipEx}
                       >
@@ -341,7 +341,7 @@ export const Tech = () => {
                         />
                       </OverlayTrigger>
                     </Col>
-                    <Col sm={4}>
+                    <Col xs={4} sm={4}>
                       <OverlayTrigger
                         placement="left"
                         delay={{ show: 100, hide: 100 }}
@@ -362,7 +362,7 @@ export const Tech = () => {
                     <Col sm={12} className="text-center">
                       <h4>UX/UI Design</h4>
                     </Col>
-                    <Col sm={4}>
+                    <Col xs={4} sm={4}>
                       <OverlayTrigger
                         placement="right"
                         delay={{ show: 100, hide: 100 }}
@@ -375,9 +375,9 @@ export const Tech = () => {
                         />
                       </OverlayTrigger>
                     </Col>
-                    <Col sm={4}>
+                    <Col xs={4} sm={4}>
                       <OverlayTrigger
-                        placement="right"
+                        placement="bottom"
                         delay={{ show: 100, hide: 100 }}
                         overlay={renderTooltipAi}
                       >
@@ -388,7 +388,7 @@ export const Tech = () => {
                         />
                       </OverlayTrigger>
                     </Col>
-                    <Col sm={4}>
+                    <Col xs={4} sm={4}>
                       <OverlayTrigger
                         placement="left"
                         delay={{ show: 100, hide: 100 }}
@@ -406,12 +406,12 @@ export const Tech = () => {
 
                 <Col xs={12} sm={12}>
                   <Row>
-                    <Col sm={6} xl={8}>
+                    <Col xs={8} sm={6} xl={8}>
                       <Row className="tech-group  h-100">
                         <Col sm={12} className="text-center">
                           <h4>Version Control System</h4>
                         </Col>
-                        <Col sm={6}>
+                        <Col xs={6} sm={6}>
                           <OverlayTrigger
                             placement="right"
                             delay={{ show: 100, hide: 100 }}
@@ -424,9 +424,9 @@ export const Tech = () => {
                             />
                           </OverlayTrigger>
                         </Col>
-                        <Col sm={6}>
+                        <Col xs={6} sm={6}>
                           <OverlayTrigger
-                            placement="right"
+                            placement="bottom"
                             delay={{ show: 100, hide: 100 }}
                             overlay={renderTooltipGithub}
                           >
@@ -440,7 +440,7 @@ export const Tech = () => {
                       </Row>
                     </Col>
 
-                    <Col sm={6} xl={4}>
+                    <Col xs={4} sm={6} xl={4}>
                       <Row className="tech-group h-100">
                         <Col sm={12} className="text-center agile-title">
                           <h4>Agile Method</h4>

@@ -7,14 +7,15 @@
   margin-bottom: 24px;
   height: 25vh;
   max-height: 265px;
+  min-height: 214px;
   object-fit: cover;
   object-position: center;
-  // @include max-700-H {
-  //   height: 40vh;
-  // }
+  @include max-768-H {
+    max-height: 214px !important;
+  }
   @include max-1200-H {
     height: 40vh;
-    max-height: 227px !important;
+    max-height: 227px;
   }
   .proj-txtx {
     position: absolute;

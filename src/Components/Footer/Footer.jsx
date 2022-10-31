@@ -33,8 +33,20 @@ export const Footer = () => {
             </div>
           </Col>
 
-          <Col sm={12} className="d-flex justify-content-center">
+          <Col sm={12} className="d-flex justify-content-center text-center">
             <p>This is a React App developed by Franco Gabriel Amoroso.</p>
+          </Col>
+          <Col sm={12} className="d-flex justify-content-center">
+            <p className="m-0">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.freepik.es/vector-gratis/nave-espacial-espacio-exterior-planetas-o-asteroides_8308810.htm#query=space%20ship&position=0&from_view=search&track=sph"
+              >
+                Imagen de upklyak
+              </a>{" "}
+              en Freepik
+            </p>
           </Col>
         </Row>
       </Container>

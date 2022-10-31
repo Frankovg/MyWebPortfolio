@@ -34,13 +34,25 @@ export const Projects = () => {
                 className="nav-pills mb-5 justify-content-center alig-items-center"
                 id="pills-tab"
               >
-                <Nav.Item>
+                {/* MOBILE */}
+                <Nav.Item className="yesMobile">
+                  <Nav.Link eventKey="first">Web</Nav.Link>
+                </Nav.Item>
+                <Nav.Item className="yesMobile">
+                  <Nav.Link eventKey="second">Graphic</Nav.Link>
+                </Nav.Item>
+                <Nav.Item className="yesMobile">
+                  <Nav.Link eventKey="third">Industrial</Nav.Link>
+                </Nav.Item>
+
+                {/* DESKTOP */}
+                <Nav.Item className="noMobile">
                   <Nav.Link eventKey="first">Web Development</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
+                <Nav.Item className="noMobile">
                   <Nav.Link eventKey="second">Graphic Design</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
+                <Nav.Item className="noMobile">
                   <Nav.Link eventKey="third">Industrial Design</Nav.Link>
                 </Nav.Item>
               </Nav>

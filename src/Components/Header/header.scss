@@ -4,6 +4,10 @@
   margin-top: 0;
   padding: 25vh 0 10vh 0;
   height: 100vh;
+  @include max-extrasmall {
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+  }
   .tagline {
     @include repeatedProperty3;
     padding: 8px 10px;
@@ -22,6 +26,9 @@
     // @include max-extralarge {
     //   font-size: 45px;
     // }
+    @include max-extrasmall {
+      font-size: $mobile-title !important;
+    }
     @include screen-1400 {
       font-size: 50px;
     }
@@ -33,15 +40,25 @@
     @include screen-1400 {
       font-size: 1rem;
     }
+    @include max-extrasmall {
+      @include mobile-text;
+    }
   }
   .toConnect {
     color: #fff;
     font-weight: 700;
     font-size: $font-size-20;
     margin-top: 60px;
+    margin-bottom: 0px;
     letter-spacing: $letter-spacing-08;
     display: flex;
     align-items: center;
+    @include max-extrasmall {
+      margin-top: 4vh;
+      margin-bottom: 2vh;
+      display: flex;
+      justify-content: center;
+    }
     svg {
       font-size: 25px;
       margin-left: 10px;
@@ -68,6 +85,16 @@
       transform: translateY(-20px);
     }
   }
+  .ship-container {
+    display: flex;
+    align-items: flex-start;
+    @include max-extrasmall {
+      justify-content: center !important;
+      .ship {
+        width: 80vw;
+      }
+    }
+  }
 }
 
 .txt-rotate > .wrap {
@@ -84,7 +111,7 @@
   img:hover {
     margin-top: 6px;
   }
-  @include max-700-H {
+  @include max-1100-H {
     display: none !important;
   }
 }

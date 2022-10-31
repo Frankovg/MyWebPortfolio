@@ -27,6 +27,9 @@
   }
   .info-text {
     font-size: $font-size-20;
+    @include max-extrasmall {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -51,6 +54,9 @@
       font-family: "Chathura", sans-serif !important;
       font-size: 1.7rem;
       margin: 0px;
+      @include max-extrasmall {
+        font-size: 1.5rem;
+      }
     }
   }
 }
