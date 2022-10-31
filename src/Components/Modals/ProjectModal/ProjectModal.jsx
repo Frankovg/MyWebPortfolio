@@ -40,11 +40,11 @@ export const ProjectModal = ({ project, show, onHide }) => {
       <Modal.Body className="show-grid">
         <Container>
           <Row className="pb-2">
-            <Col sm={9} className="px-0 py-1">
+            <Col xs={12} sm={9} className="px-0 py-1">
               <p>{description}</p>
             </Col>
             {repo && repo !== "" ? (
-              <Col sm={1} className="px-0">
+              <Col xs={2} sm={1} className="px-0">
                 <a href={repo} target="_blank" rel="noreferrer">
                   <img src={github} alt="Github icon" />
                 </a>
@@ -53,7 +53,7 @@ export const ProjectModal = ({ project, show, onHide }) => {
               <></>
             )}
             {video && video !== "" ? (
-              <Col sm={1} className="px-0">
+              <Col xs={2} sm={1} className="px-0">
                 <a href={video} target="_blank" rel="noreferrer">
                   <img src={youtube} alt="Youtube icon" />
                 </a>
@@ -62,7 +62,7 @@ export const ProjectModal = ({ project, show, onHide }) => {
               <></>
             )}
             {test && test !== "" ? (
-              <Col sm={1} className="px-0">
+              <Col xs={2} sm={1} className="px-0">
                 <a href={test} disabled target="_blank" rel="noreferrer">
                   <img src={openBrowser} alt="Youtube icon" />
                 </a>
@@ -76,7 +76,6 @@ export const ProjectModal = ({ project, show, onHide }) => {
             <Col>
               <Carousel fade>
                 {pictures?.map((img, index) => {
-                  // console.log("una sola ", img);
                   return (
                     <Carousel.Item key={index}>
                       <img

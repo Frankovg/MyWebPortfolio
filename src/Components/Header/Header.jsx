@@ -63,7 +63,7 @@ export const Header = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} lg={7}>
+          <Col xs={12} sm={12} lg={7}>
             <TrackVisibility once>
               {({ isVisible }) => (
                 <div
@@ -97,7 +97,7 @@ export const Header = () => {
             </TrackVisibility>
           </Col>
 
-          <Col xs={12} md={6} lg={5} className="d-flex align-items-start">
+          <Col xs={12} sm={12} lg={5} className="ship-container">
             <TrackVisibility once>
               {({ isVisible }) => (
                 <div

@@ -2,6 +2,10 @@
 
 .contact {
   padding: 115px 0 200px 0;
+  @include max-extrasmall {
+    padding-top: 25px;
+    padding-bottom: 70px;
+  }
   img {
     width: 92%;
   }
@@ -35,19 +39,6 @@
       color: $grey;
       opacity: 0.5;
     }
-    // button {
-    //   font-weight: 700;
-    //   padding: 14px 48px;
-    //   font-size: 18px;
-    //   margin-top: 25px;
-    //   border-radius: 0;
-    //   position: relative;
-    //   color: #000;
-    //   span {
-    //     z-index: 1;
-    //     position: relative;
-    //   }
-    // }
     .send-btn {
       background-color: #fff;
       @include transition;

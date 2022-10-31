@@ -3,15 +3,25 @@
 .tech-stack {
   margin: 0 0 120px 0;
   position: relative;
+  @include max-extrasmall {
+    margin-bottom: 2rem;
+  }
   .tech-bx {
     h2 {
       font-size: 45px;
       font-weight: 700;
+      @include max-extrasmall {
+        font-size: $mobile-title;
+      }
     }
     p {
       @include parrafo;
       margin: 14px auto 50px auto;
       max-width: 600px;
+      @include max-extrasmall {
+        @include mobile-text;
+        margin-bottom: 25px;
+      }
       @include screen-1400 {
         font-size: 1rem;
       }
@@ -26,13 +36,13 @@
         padding-top: 0.5rem;
         padding-bottom: 1rem;
       }
-      // @include max-extralarge {
-      //   .agile-title {
-      //     h4 {
-      //       font-size: 1.2rem !important;
-      //     }
-      //   }
-      // }
+      @include max-extrasmall {
+        .agile-title {
+          h4 {
+            font-size: 0.9rem !important;
+          }
+        }
+      }
     }
     .up-lg {
       display: none !important;
@@ -56,11 +66,17 @@
     }
     h4 {
       font-size: 1.5rem;
+      @include max-extrasmall {
+        font-size: 1rem;
+      }
     }
     img {
       width: 65%;
       position: relative;
       @include transition-icon;
+      @include max-extrasmall {
+        width: 25vw !important;
+      }
       @include max-large-H {
         width: 50%;
       }
@@ -71,12 +87,12 @@
     .gitH,
     .githubH {
       @include max-extralarge {
-        width: 45% !important;
+        width: 45%;
       }
     }
     .scrumH {
       @include max-extralarge {
-        width: 20% !important;
+        width: 20%;
       }
     }
     .nodeH,

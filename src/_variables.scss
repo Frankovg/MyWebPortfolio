@@ -9,6 +9,12 @@ $purpleLogo: #e453bc;
 $cyanLogoFilter: brightness(0) saturate(100%) invert(94%) sepia(7%)
   saturate(3213%) hue-rotate(93deg) brightness(100%) contrast(94%);
 $gradient: linear-gradient(90.21deg, #aa367c -5.91%, #092db2 111.58%);
+$mobile-title: 2rem;
+
+@mixin mobile-text {
+  font-size: 0.8rem !important;
+  text-align: left !important;
+}
 
 @mixin zeroStart {
   margin: 0;
@@ -46,14 +52,44 @@ $gradient: linear-gradient(90.21deg, #aa367c -5.91%, #092db2 111.58%);
 
 // MEDIA QUERYs
 
+@mixin max-extrasmall {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+
 @mixin max-700-H {
   @media only screen and (max-height: 700px) {
     @content;
   }
 }
 
+@mixin max-medium {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin max-768-H {
+  @media only screen and (max-height: 768px) {
+    @content;
+  }
+}
+
 @mixin max-large-H {
   @media only screen and (max-height: 992px) {
+    @content;
+  }
+}
+
+@mixin max-large {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin max-1100-H {
+  @media only screen and (max-height: 1100px) {
     @content;
   }
 }

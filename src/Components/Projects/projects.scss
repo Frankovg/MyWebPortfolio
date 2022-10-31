@@ -2,13 +2,15 @@
 
 .project {
   padding: 5px 0;
-  //   z-index: -1;
   position: relative;
-  //   background-color: black;
+
   h2 {
     font-size: 45px;
     font-weight: 700;
     text-align: center;
+    @include max-extrasmall {
+      font-size: $mobile-title;
+    }
   }
   p {
     @include parrafo;
@@ -16,6 +18,11 @@
     text-align: center;
     width: 56%;
     max-width: 600px;
+    @include max-extrasmall {
+      @include mobile-text;
+      margin-inline: 0px;
+      width: auto;
+    }
     @include screen-1400 {
       font-size: 1rem;
     }
@@ -26,8 +33,22 @@
     border-radius: 25px;
     background-color: $grey-transp;
     overflow: hidden;
+    @include max-extrasmall {
+      width: 95%;
+    }
     .nav-item {
       width: 33.33333%;
+    }
+    .yesMobile {
+      display: none;
+      @include max-medium {
+        display: initial;
+      }
+    }
+    .noMobile {
+      @include max-medium {
+        display: none;
+      }
     }
     .nav-link {
       background-color: transparent;
