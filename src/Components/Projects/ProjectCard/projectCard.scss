@@ -39,7 +39,7 @@
       letter-spacing: $letter-spacing-08;
     }
     button {
-      color: white;
+      // color: white;
       background-color: transparent;
       border: none;
       font-size: 3rem;
@@ -55,9 +55,28 @@
   }
 }
 
+.web::before {
+  background: $gradient;
+}
+
+.graphic::before {
+  background: linear-gradient(
+    90.21deg,
+    rgb(36, 36, 36) -5.91%,
+    #5cedc2 111.58%
+  );
+}
+
+.industrial::before {
+  background: linear-gradient(
+    90.21deg,
+    rgb(36, 36, 36) -5.91%,
+    #e453bc 111.58%
+  );
+}
+
 .proj-imgbx::before {
   content: "";
-  background: $gradient;
   opacity: 0.85;
   position: absolute;
   width: 100%;

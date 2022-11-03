@@ -5,6 +5,8 @@ import "animate.css";
 import "./projects.scss";
 import TrackVisibility from "react-on-screen";
 import webProjects from "./DB/WebProjects";
+import graphicDesigns from "./DB/GraphicDesign";
+import industrialDesigns from "./DB/IndustrialDesign";
 
 export const Projects = () => {
   return (
@@ -74,23 +76,19 @@ export const Projects = () => {
                     </Tab.Pane>
 
                     <Tab.Pane eventKey="second">
-                      {" "}
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Cumque quam, quod neque provident velit, rem explicabo
-                        excepturi id illo molestiae blanditiis, eligendi dicta
-                        officiis asperiores delectus quasi inventore debitis
-                        quo.
-                      </p>
+                      <Row>
+                        {graphicDesigns.map((project, index) => {
+                          return <ProjectCard key={index} project={project} />;
+                        })}
+                      </Row>
                     </Tab.Pane>
 
                     <Tab.Pane eventKey="third">
-                      {" "}
-                      <p>
-                        Portfolio 2022 - Actualización. Mismo portfolio, con
-                        nuevas cosillas y perfil actualizado. Saludos y buen fin
-                        de semana! #fullstackdeveloper #frontend #react
-                      </p>
+                      <Row>
+                        {industrialDesigns.map((project, index) => {
+                          return <ProjectCard key={index} project={project} />;
+                        })}
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 )}

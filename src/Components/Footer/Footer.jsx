@@ -11,7 +11,9 @@ export const Footer = () => {
       <Container>
         <Row className="align-item-center">
           <Col sm={12} className="d-flex justify-content-center">
-            <img className="logo-footer" src={logo} alt="Logo" />
+            <a href="/">
+              <img className="logo-footer" src={logo} alt="Logo" />
+            </a>
           </Col>
 
           <Col sm={12} className="d-flex justify-content-center mt-3">

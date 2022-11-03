@@ -7,6 +7,7 @@ import portfolio from "../../../assets/projects/portfolio.png";
 
 const webProjects = [
   {
+    type: "web",
     title: "MVP for Coolx",
     description: "Minimum viable product development",
     imgUrl: coolxMain,
@@ -21,6 +22,7 @@ const webProjects = [
     stack: "React.js, JavaScript, Node.js, Express, MySQL, Bootstrap, Sass",
   },
   {
+    type: "web",
     title: "DigiArt",
     description: "A social network for digital artists",
     imgUrl: digiartMain,
@@ -34,6 +36,7 @@ const webProjects = [
     stack: "HTML5, CSS3, Bootstrap, Sass, JavaScript, Node.js, Express, MySQL",
   },
   {
+    type: "web",
     title: "Netfilm",
     description: "A Netflix clone made with React",
     imgUrl: netfilmMovies,
@@ -48,6 +51,7 @@ const webProjects = [
     stack: "React.js, Redux, JavaScript, Bootstrap, Sass, Firebase",
   },
   {
+    type: "web",
     title: "Calculator",
     description: "Built with JavaScript",
     imgUrl: calc,
@@ -61,6 +65,7 @@ const webProjects = [
     stack: "JavaScript, HTML5, CSS3, Sass",
   },
   {
+    type: "web",
     title: "Video Player",
     description: "Made from scratch with JavaScript",
     imgUrl: videoplayer,
@@ -74,6 +79,7 @@ const webProjects = [
     stack: "JavaScript, HTML5, CSS3",
   },
   {
+    type: "web",
     title: "My personal web portfolio",
     description: "A React web app made with love for you",
     imgUrl: portfolio,

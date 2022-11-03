@@ -6,12 +6,12 @@ import { ProjectModal } from "../../Modals/ProjectModal/ProjectModal";
 export const ProjectCard = ({ project }) => {
   const [openModal, setOpenModal] = useState(false);
 
-  const { title, description, imgUrl } = project;
+  const { type, title, description, imgUrl } = project;
 
   return (
     <>
       <Col xs={12} sm={12} lg={6} xl={4}>
-        <div className="proj-imgbx">
+        <div className={`proj-imgbx ${type}`}>
           <img src={imgUrl} alt="Project poster" />
           <div className="proj-txtx d-flex flex-column align-items-center">
             <h4>{title}</h4>

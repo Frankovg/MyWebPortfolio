@@ -1,0 +1,85 @@
+import pubExt from "../../../assets/projects/pub-ext.png";
+import manuals from "../../../assets/projects/manuals.png";
+import artNorush from "../../../assets/projects/art-norush.png";
+import logotype from "../../../assets/projects/logo-design.png";
+import uxui from "../../../assets/projects/uxui.png";
+
+const graphicDesigns = [
+  {
+    type: "graphic",
+    title: "Outdoor Advertising",
+    description: "Street billboards and store advertising",
+    imgUrl: pubExt,
+    info: "Working at Pubext 2000 as an Art Director and for RótulosAlex as a freelancer I had the opportunity to be part of many projects. Most of them for small local merchants and others were big brands like construction companies.",
+    repo: "",
+    video: "",
+    test: "",
+    pictures: [
+      "pub-exterior-1.png",
+      "pub-exterior-2.png",
+      "pub-exterior-3.png",
+      "pub-exterior-4.png",
+    ],
+    client: "Via Célere, Admiral and more",
+    company: "Pubext, freelancer",
+    stack: "Photoshop, Illustrator",
+  },
+  {
+    type: "graphic",
+    title: "Corporate Manuals",
+    description: "Identity manuals, instructions, books",
+    imgUrl: manuals,
+    info: "I have worked with many brands along my career and in some cases I developed their restyling, instruction books and advertising magazines. Also I made identity corporate manuals for small companies.",
+    repo: "",
+    video: "",
+    test: "",
+    pictures: ["manual-1.png", "manual-2.png", "manual-3.png", "manual-4.png"],
+    client: "Via Célere, Personal and more",
+    company: "Pubext, Grupo Quiero",
+    stack: "Photoshop, Illustrator, InDesign",
+  },
+  {
+    type: "graphic",
+    title: "Art Design",
+    description: "Digital art and textures",
+    imgUrl: artNorush,
+    info: "I used to have a brand named NoRush with my partner. Of course I was in charge of developing the concept designs. These are some examples of the designs we used for wallets.",
+    repo: "",
+    video: "",
+    test: "",
+    pictures: ["art-1.png", "art-2.png", "art-3.png"],
+    client: "",
+    company: "NoRush",
+    stack: "Photoshop, Illustrator, Corel Draw",
+  },
+  {
+    type: "graphic",
+    title: "Logos",
+    description: "Branding, restyling, new brands",
+    imgUrl: logotype,
+    info: "As a designer I have designed a lot of logos. In general they were for small or new companies because big companies have a strong image already.",
+    repo: "",
+    video: "",
+    test: "",
+    pictures: ["logos-1.png", "logos-2.png", "logos-3.png", "logos-4.png"],
+    client: "",
+    company: "Pubext, freelancer",
+    stack: "Photoshop, Illustrator, Corel Draw",
+  },
+  {
+    type: "graphic",
+    title: "UX/UI Design",
+    description: "User experience and interface designs",
+    imgUrl: uxui,
+    info: "I obtained a professional UX/UI Design certificate from Google because I needed to complement the knowledge to my hybrid profile. Now, as a designer, I can talk the same language as the UX designers. I never worked professionally in this area but I am always putting my expertise when I am developing the front-end of an application.",
+    repo: "",
+    video: "",
+    test: "",
+    pictures: ["digiart-ux.png", "uxui-1.png", "uxui-2.png"],
+    client: "",
+    company: "Freelancer",
+    stack: "Photoshop, Illustrator, Figma, AdobeXD",
+  },
+];
+
+export default graphicDesigns;
