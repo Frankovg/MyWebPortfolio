@@ -18,7 +18,8 @@ nav.navbar {
     }
   }
   .navbar-nav {
-    .nav-link.navbar-link {
+    .nav-link.navbar-link,
+    .dropdown-toggle.nav-link {
       font-weight: 400;
       color: #fff !important;
       letter-spacing: $letter-spacing-08;
@@ -33,6 +34,25 @@ nav.navbar {
     a.nav-link.navbar-link.active {
       opacity: 1;
     }
+  }
+}
+
+.dropdown-menu.show {
+  background-color: $darkgrey;
+  padding-bottom: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border: none;
+  .dropdown-item {
+    color: white;
+    text-align: right;
+  }
+  .dropdown-item:hover {
+    background-color: $cyanLogo;
+    color: black;
+  }
+  .dropdown-divider {
+    border-color: $purpleLogo;
   }
 }
 

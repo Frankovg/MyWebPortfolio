@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import { HashLink } from "react-router-hash-link";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import logo from "../../assets/logo/logo.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
 import github from "../../assets/icons/github.svg";
+import cv from "../../assets/cv/Franco_Amoroso_cv_2022_en.pdf";
+import portfolio from "../../assets/portfolio/amoroso_franco_portfolio22_desktop.pdf";
 import "./navBar.scss";
 
 export const NavBar = () => {
@@ -35,6 +38,9 @@ export const NavBar = () => {
       Work in progress!
     </Tooltip>
   );
+
+  // href={cv}
+  // download="franco_amoroso_cv_2022_en"
 
   return (
     <Navbar collapseOnSelect expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -74,21 +80,24 @@ export const NavBar = () => {
             >
               Projects
             </Nav.Link>
-            <OverlayTrigger
-              placement="bottom"
-              delay={{ show: 100, hide: 100 }}
-              overlay={renderTooltipDownload}
+            <NavDropdown
+              title="Download"
+              id="collasible-nav-dropdown"
+              className={
+                activeLink === "Projects" ? "active navbar-link" : "navbar-link"
+              }
             >
-              <Nav.Link
-                className={
-                  activeLink === "Projects"
-                    ? "active navbar-link"
-                    : "navbar-link"
-                }
+              <NavDropdown.Item href={cv} download="franco_amoroso_cv_2022_en">
+                Curriculum Vitae
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href={portfolio}
+                download="franco_amoroso_portfolio_2022_en"
               >
-                Downloads
-              </Nav.Link>
-            </OverlayTrigger>
+                Portfolio
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+            </NavDropdown>
           </Nav>
 
           <span className="navbar-text">
