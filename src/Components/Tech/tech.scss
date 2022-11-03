@@ -4,6 +4,7 @@
   margin: 0 0 120px 0;
   position: relative;
   @include max-extrasmall {
+    padding-inline: 12px;
     margin-bottom: 2rem;
   }
   .tech-bx {

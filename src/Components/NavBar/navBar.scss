@@ -25,6 +25,9 @@ nav.navbar {
       padding: 0 25px;
       font-size: 18px;
       opacity: 0.75;
+      @include b-992-1200 {
+        font-size: 12px;
+      }
     }
     a.nav-link.navbar-link:hover,
     a.nav-link.navbar-link.active {
@@ -36,6 +39,9 @@ nav.navbar {
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
+  @include max-extrasmall {
+    padding-block: 5px;
+  }
 }
 
 .navbar-text {
@@ -53,6 +59,9 @@ nav.navbar.scrolled {
     @include transition;
     span {
       z-index: 1;
+    }
+    @include b-992-1200 {
+      font-size: 14px;
     }
   }
   button::before {
@@ -128,16 +137,22 @@ nav.navbar {
       background-size: 30%;
       text-align: right !important;
       padding-block: 2rem !important;
+      .aboutMe {
+        padding-inline: 0px !important;
+      }
       .nav-link {
         padding-block: 0.5rem !important;
       }
       .navbar-text {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: flex-end;
         padding-right: 25px;
-        a {
-          margin-inline: 0.5rem;
+        .social-icon {
+          order: 3;
+          a {
+            margin-inline: 0.5rem;
+          }
         }
       }
       button {

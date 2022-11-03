@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
 import logo from "../../assets/logo/logo.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
 import github from "../../assets/icons/github.svg";
@@ -27,6 +29,12 @@ export const NavBar = () => {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
+
+  const renderTooltipDownload = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Work in progress!
+    </Tooltip>
+  );
 
   return (
     <Navbar collapseOnSelect expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -66,9 +74,41 @@ export const NavBar = () => {
             >
               Projects
             </Nav.Link>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 100, hide: 100 }}
+              overlay={renderTooltipDownload}
+            >
+              <Nav.Link
+                className={
+                  activeLink === "Projects"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
+              >
+                Downloads
+              </Nav.Link>
+            </OverlayTrigger>
           </Nav>
 
           <span className="navbar-text">
+            <Nav>
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 100, hide: 100 }}
+                overlay={renderTooltipDownload}
+              >
+                <Nav.Link
+                  className={`aboutMe ${
+                    activeLink === "Projects"
+                      ? "active navbar-link"
+                      : "navbar-link"
+                  }`}
+                >
+                  About me
+                </Nav.Link>
+              </OverlayTrigger>
+            </Nav>
             <div className="social-icon">
               <a
                 target="_blank"

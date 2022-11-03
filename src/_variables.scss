@@ -94,6 +94,12 @@ $mobile-title: 2rem;
   }
 }
 
+@mixin b-992-1200 {
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
 @mixin max-1200-H {
   @media only screen and (max-height: 1200px) {
     @content;
@@ -121,7 +127,6 @@ $mobile-title: 2rem;
 // SOCIAL NETWORK ICONS
 .social-icon {
   display: inline-block;
-  // margin-left: 14px;
   a {
     @include iconSize;
     background: $grey-transp;

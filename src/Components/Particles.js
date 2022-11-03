@@ -17,7 +17,6 @@ const ParticlesComponent = (props) => {
         color: {
           value: "#ffffff",
         },
-
         move: {
           enable: true, // enabling this will make particles move in the canvas
           speed: { min: 0, max: 1 }, // using a range in speed value will make particles move in a random speed between min/max values, each particles have its own value, it won't change in time by default
@@ -40,7 +39,6 @@ const ParticlesComponent = (props) => {
   }, []);
 
   const particlesInit = useCallback(async (engine) => {
-    // console.log(engine);
     await loadSlim(engine);
   }, []);
 

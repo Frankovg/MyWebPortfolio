@@ -23,8 +23,6 @@ export const ProjectModal = ({ project, show, onHide }) => {
     stack,
   } = project;
 
-  // console.log("pictures: ", pictures);
-
   return (
     <Modal
       show={show}
