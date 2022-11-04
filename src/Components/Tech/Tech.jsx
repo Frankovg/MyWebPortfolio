@@ -113,7 +113,7 @@ export const Tech = () => {
   );
 
   return (
-    <div className="tech-stack" id="tech-stack">
+    <section className="tech-stack" id="tech-stack">
       <Container>
         <div className="tech-bx animate__animated animate__zoomIn">
           <Row>
@@ -467,6 +467,6 @@ export const Tech = () => {
           </Row>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };

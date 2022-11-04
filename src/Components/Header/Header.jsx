@@ -60,7 +60,7 @@ export const Header = () => {
   };
 
   return (
-    <section className="banner" id="home">
+    <header className="banner" id="home">
       <Container>
         <Row className="align-items-center">
           <Col xs={12} sm={12} lg={7}>
@@ -118,6 +118,6 @@ export const Header = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </header>
   );
 };
