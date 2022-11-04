@@ -83,7 +83,7 @@ export const Header = () => {
                     </span>
                   </h1>
                   <p>
-                    My current focus is developing web apps especially on the
+                    My current focus is on developing web apps especially on the
                     Front-end. My background is an Industrial Designer and I
                     have a solid expertise working for big companies around the
                     world. <br /> I hope you enjoy this trip I have made for you
