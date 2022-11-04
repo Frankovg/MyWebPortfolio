@@ -35,7 +35,17 @@ export const Footer = () => {
             </div>
           </Col>
 
-          <Col sm={12} className="d-flex justify-content-center text-center">
+          <Col
+            sm={12}
+            className="d-flex justify-content-center text-center mod"
+          >
+            <p>Last modified: 11-04-2022</p>
+          </Col>
+
+          <Col
+            sm={12}
+            className="d-flex justify-content-center text-center credits"
+          >
             <p>This is a React App developed by Franco Gabriel Amoroso.</p>
           </Col>
           <Col sm={12} className="d-flex justify-content-center">

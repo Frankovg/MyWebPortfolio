@@ -30,85 +30,85 @@ export const Tech = () => {
   );
   const renderTooltipHTML = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      It is a standard markup language for web page creation.
+      A standard markup language for web page creation.
     </Tooltip>
   );
   const renderTooltipCSS = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is used to stylize elements written in HTML.
+      Used to stylize elements written in HTML.
     </Tooltip>
   );
   const renderTooltipJs = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is the Programming Language for the Web.
+      The programming language for the Web.
     </Tooltip>
   );
   const renderTooltipTs = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is a syntactic superset of JavaScript which adds static typing.
+      Syntactic superset of JavaScript which adds static typing.
     </Tooltip>
   );
   const renderTooltipBoot = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is the most popular CSS Framework.
+      The most popular CSS Framework.
     </Tooltip>
   );
   const renderTooltipSass = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is an extension of CSS.
+      An extension of CSS.
     </Tooltip>
   );
   const renderTooltipRedux = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is a predictable state container for JavaScript apps.
+      A predictable state container for JavaScript apps.
     </Tooltip>
   );
 
   const renderTooltipNode = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is an open source server environment.
+      An open source server environment.
     </Tooltip>
   );
   const renderTooltipEx = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is a minimal and flexible Node.js web application framework.
+      A minimal and flexible Node.js web application framework.
     </Tooltip>
   );
   const renderTooltipSQL = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is a relational database management system.
+      A relational database management system.
     </Tooltip>
   );
 
   const renderTooltipPs = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      For image editing and photo retouching.
+      Image editing and photo retouching.
     </Tooltip>
   );
   const renderTooltipAi = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      For creating drawings, illustrations and artwork.
+      Creating drawings, illustrations and artwork.
     </Tooltip>
   );
   const renderTooltipFigma = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is a web-based graphics editing and user interface design app.
+      A web-based graphics editing and user interface design app.
     </Tooltip>
   );
 
   const renderTooltipGit = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is a version control system designed to handle everything.
+      A version control system designed to handle everything.
     </Tooltip>
   );
   const renderTooltipGithub = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is a code hosting platform for collaboration and version control.
+      A code hosting platform for collaboration and version control.
     </Tooltip>
   );
   const renderTooltipScrum = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Is a process framework used to manage product development.
+      A process framework used to manage product development.
     </Tooltip>
   );
 

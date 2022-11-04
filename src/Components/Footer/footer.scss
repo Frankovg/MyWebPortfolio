@@ -6,10 +6,17 @@
     width: 10rem;
   }
   p {
-    font-weight: 400;
-    font-size: 1rem;
     color: $grey;
     letter-spacing: 0.5px;
+  }
+  .mod {
+    font-size: 0.8rem !important;
+    padding-top: 20px;
+  }
+  .credits {
+    font-weight: 400;
+    font-size: 1rem;
+
     margin-top: 20px;
   }
   a {
