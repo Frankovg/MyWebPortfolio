@@ -15,10 +15,6 @@ export const Home = () => {
           name="description"
           content="Full Stack Web Developer | React + Node + MySQL || UX & Industrial Designer"
         />
-        <meta
-          name="keywords"
-          content="react, javascript, html, css, mysql, node, front-end, back-end, full-stack, web developer"
-        />
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="Franco Gabriel Amoroso" />
         <link rel="canonical" href="https://www.franamoroso.com/" />
