@@ -1,0 +1,52 @@
+@import "../../variables";
+
+.errorPage {
+  margin-top: 0;
+  padding: 25vh 0 10vh 0;
+  height: 100vh;
+  @include max-extrasmall {
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+  }
+  .lost-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h1 {
+      font-weight: 700;
+      font-size: 4rem;
+    }
+    h2 {
+      span {
+        color: $purpleLogo;
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .lost-container {
+    display: flex;
+    align-items: flex-start;
+    @include max-extrasmall {
+      justify-content: center !important;
+      .lost {
+        width: 80vw;
+      }
+    }
+    .lost {
+      animation: updown 3s linear infinite;
+    }
+    @include svg-animation;
+  }
+  button {
+    background-color: transparent;
+    border-radius: 0px;
+    border: 1px solid white;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  button:hover {
+    background-color: $purpleLogo;
+    border-color: $cyanLogo;
+  }
+}

@@ -39,9 +39,6 @@ export const NavBar = () => {
     </Tooltip>
   );
 
-  // href={cv}
-  // download="franco_amoroso_cv_2022_en"
-
   return (
     <Navbar collapseOnSelect expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
