@@ -41,34 +41,11 @@
       opacity: 0.5;
     }
     .send-btn {
-      background-color: #fff;
-      @include transition;
-      font-weight: 700;
       padding: 14px 48px;
       font-size: 18px;
       margin-top: 25px;
-      border-radius: 0;
-      position: relative;
-      color: #000;
-      span {
-        z-index: 1;
-        position: relative;
-      }
     }
-    .send-btn::before {
-      content: "";
-      background: $cyanLogo;
-      width: 0;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      @include transition;
-    }
-    .send-btn:hover::before {
-      width: 100%;
-    }
+    @include send-btn;
     .thanks-btn {
       background-color: $cyanLogo !important;
       font-weight: 700;
