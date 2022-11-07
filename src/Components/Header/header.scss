@@ -23,9 +23,6 @@
     line-height: 1;
     margin-bottom: 20px;
     display: block;
-    // @include max-extralarge {
-    //   font-size: 45px;
-    // }
     @include max-extrasmall {
       font-size: $mobile-title !important;
     }
@@ -111,7 +108,10 @@
   img:hover {
     margin-top: 6px;
   }
-  @include max-1100-H {
+  @include b-576-992 {
+    display: none !important;
+  }
+  @include max-767-H {
     display: none !important;
   }
 }

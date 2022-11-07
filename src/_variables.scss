@@ -50,6 +50,36 @@ $mobile-title: 2rem;
   line-height: 1.5em;
 }
 
+@mixin send-btn {
+  .send-btn {
+    background-color: #fff;
+    @include transition;
+    font-weight: 700;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    color: #000;
+    span {
+      z-index: 1;
+      position: relative;
+    }
+  }
+  .send-btn::before {
+    content: "";
+    background: $cyanLogo;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    @include transition;
+  }
+  .send-btn:hover::before {
+    width: 100%;
+  }
+}
+
 // MEDIA QUERYs
 
 @mixin max-extrasmall {
@@ -58,11 +88,11 @@ $mobile-title: 2rem;
   }
 }
 
-@mixin max-700-H {
-  @media only screen and (max-height: 700px) {
-    @content;
-  }
-}
+// @mixin max-700-H {
+//   @media only screen and (max-height: 700px) {
+//     @content;
+//   }
+// }
 
 @mixin max-medium {
   @media only screen and (max-width: 768px) {
@@ -70,8 +100,14 @@ $mobile-title: 2rem;
   }
 }
 
-@mixin max-768-H {
-  @media only screen and (max-height: 768px) {
+@mixin max-767-H {
+  @media only screen and (max-height: 767px) {
+    @content;
+  }
+}
+
+@mixin b-576-992 {
+  @media only screen and (min-width: 576px) and (max-width: 992px) {
     @content;
   }
 }
@@ -88,11 +124,11 @@ $mobile-title: 2rem;
   }
 }
 
-@mixin max-1100-H {
-  @media only screen and (max-height: 1100px) {
-    @content;
-  }
-}
+// @mixin max-1100-H {
+//   @media only screen and (max-height: 1100px) {
+//     @content;
+//   }
+// }
 
 @mixin b-992-1200 {
   @media only screen and (min-width: 992px) and (max-width: 1199px) {

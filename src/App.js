@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet-async";
 function App() {
   return (
     <BrowserRouter>
-      <Helmet>
+      <Helmet prioritizeSeoTags>
         <title>FRAN Web Dev</title>
         <meta
           name="description"
