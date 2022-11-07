@@ -12,6 +12,7 @@ export const Success = ({ show, onHide }) => {
       centered
       onHide={onHide}
       bsPrefix="modal"
+      className="modal-centered"
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter"></Modal.Title>

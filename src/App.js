@@ -6,6 +6,7 @@ import { NavBar } from "./Components/NavBar/NavBar";
 import { Footer } from "./Components/Footer/Footer";
 import { Home } from "./Pages/Home/Home";
 import { Helmet } from "react-helmet-async";
+import { ErrorPage } from "./Components/Error/ErrorPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
       <Footer />
       <Particles id="tsparticles" />
