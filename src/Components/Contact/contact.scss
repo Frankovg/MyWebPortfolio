@@ -7,8 +7,11 @@
     padding-bottom: 70px;
     padding-inline: 8px;
   }
-  img {
-    width: 92%;
+  .station {
+    img {
+      animation-fill-mode: none;
+      width: 92%;
+    }
   }
   h2 {
     font-size: 45px;

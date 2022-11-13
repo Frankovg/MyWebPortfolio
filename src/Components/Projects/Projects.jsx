@@ -1,7 +1,8 @@
 import React from "react";
 import { ProjectCard } from "./ProjectCard/ProjectCard";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import "animate.css";
+import { Fade } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import "./projects.scss";
 import TrackVisibility from "react-on-screen";
 import webProjects from "./DB/WebProjects";
@@ -15,58 +16,51 @@ export const Projects = () => {
         <Row>
           <Col size={12}>
             <TrackVisibility offset={500}>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
+              <Fade>
+                <div>
                   <h2>Projects</h2>
                   <p>
                     A short exploration of my present as a Web Developer and my
                     past as a Designer.
                   </p>
                 </div>
-              )}
+              </Fade>
             </TrackVisibility>
 
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav
-                variant="pills"
-                className="nav-pills mb-5 justify-content-center alig-items-center"
-                id="pills-tab"
-              >
-                {/* MOBILE */}
-                <Nav.Item className="yesMobile">
-                  <Nav.Link eventKey="first">Web</Nav.Link>
-                </Nav.Item>
-                <Nav.Item className="yesMobile">
-                  <Nav.Link eventKey="second">Graphic</Nav.Link>
-                </Nav.Item>
-                <Nav.Item className="yesMobile">
-                  <Nav.Link eventKey="third">Industrial</Nav.Link>
-                </Nav.Item>
+              <Fade>
+                <Nav
+                  variant="pills"
+                  className="nav-pills mb-5 justify-content-center alig-items-center"
+                  id="pills-tab"
+                >
+                  {/* MOBILE */}
+                  <Nav.Item className="yesMobile">
+                    <Nav.Link eventKey="first">Web</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item className="yesMobile">
+                    <Nav.Link eventKey="second">Graphic</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item className="yesMobile">
+                    <Nav.Link eventKey="third">Industrial</Nav.Link>
+                  </Nav.Item>
 
-                {/* DESKTOP */}
-                <Nav.Item className="noMobile">
-                  <Nav.Link eventKey="first">Web Development</Nav.Link>
-                </Nav.Item>
-                <Nav.Item className="noMobile">
-                  <Nav.Link eventKey="second">Graphic Design</Nav.Link>
-                </Nav.Item>
-                <Nav.Item className="noMobile">
-                  <Nav.Link eventKey="third">Industrial Design</Nav.Link>
-                </Nav.Item>
-              </Nav>
+                  {/* DESKTOP */}
+                  <Nav.Item className="noMobile">
+                    <Nav.Link eventKey="first">Web Development</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item className="noMobile">
+                    <Nav.Link eventKey="second">Graphic Design</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item className="noMobile">
+                    <Nav.Link eventKey="third">Industrial Design</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Fade>
 
               <TrackVisibility offset={1000} partialVisibility>
-                {({ isVisible }) => (
-                  <Tab.Content
-                    id="slideInUp"
-                    className={
-                      isVisible ? "animate__animated animate__slideInUp" : ""
-                    }
-                  >
+                <Slide direction="up" triggerOnce={true}>
+                  <Tab.Content id="slideInUp">
                     <Tab.Pane eventKey="first">
                       <Row>
                         {webProjects.map((project, index) => {
@@ -91,7 +85,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                   </Tab.Content>
-                )}
+                </Slide>
               </TrackVisibility>
             </Tab.Container>
           </Col>

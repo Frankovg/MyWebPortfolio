@@ -1,0 +1,87 @@
+@import "../../variables";
+
+.faq {
+  h2 {
+    font-size: 45px;
+    font-weight: 700;
+    @include max-extrasmall {
+      font-size: $mobile-title;
+    }
+  }
+  p {
+    @include parrafo;
+    margin: 14px auto 50px auto;
+    max-width: 600px;
+    @include max-extrasmall {
+      @include mobile-text;
+      margin-bottom: 25px;
+    }
+    @include screen-1400 {
+      font-size: 1rem;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .cv-link:hover {
+    color: $cyanLogo;
+  }
+  .done {
+    color: $purpleLogo !important;
+  }
+  .accordion {
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-width: none;
+    --bs-accordion-active-color: transparent;
+    .accordion-collapse,
+    .accordion-button {
+      color: white;
+    }
+    .accordion-body {
+      font-weight: 400;
+    }
+    .accordion-button.collapsed {
+      font-weight: 500;
+      font-size: 18px;
+      color: white;
+    }
+    .accordion-button.collapsed:hover {
+      font-weight: 700;
+    }
+    .accordion-button.collapsed::after {
+      filter: brightness(100);
+    }
+    .accordion-button {
+      background-color: transparent;
+      font-weight: 700;
+      font-size: 24px;
+      color: $cyanLogo;
+      border-bottom: 1px solid white;
+    }
+    .accordion-button::after {
+      filter: $cyanLogoFilter;
+    }
+  }
+  .list-group-item {
+    color: white;
+    background-color: transparent;
+  }
+  .faq-content {
+    .study-bx:hover {
+      background-color: $grey-transp;
+      h5 {
+        color: $cyanLogo;
+      }
+      h6 {
+        color: $purpleLogo;
+      }
+    }
+    p {
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-block: 0.8rem;
+    }
+  }
+}

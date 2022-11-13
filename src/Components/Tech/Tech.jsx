@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import "animate.css";
+import { Fade } from "react-awesome-reveal";
 import "./tech.scss";
 import reactIcon from "../../assets/icons/react.svg";
 import htmlIcon from "../../assets/icons/html.svg";
@@ -115,356 +115,374 @@ export const Tech = () => {
   return (
     <section className="tech-stack" id="tech-stack">
       <Container>
-        <div className="tech-bx animate__animated animate__zoomIn">
-          <Row>
-            <Col className="text-center">
-              <h2>Tech Stack</h2>
-              <p>
-                The following technologies are the most demanded at the moment.
-                I like to be updated and keep growing and learning.
-              </p>
-            </Col>
-          </Row>
+        <div className="tech-bx">
+          <Fade>
+            <Row>
+              <Col className="text-center">
+                <h2>Tech Stack</h2>
+                <p>
+                  The following technologies are the most demanded at the
+                  moment. I like to be updated and keep growing and learning.
+                </p>
+              </Col>
+            </Row>
 
-          <Row>
-            {/* LEFT BLOCK ** DOWN-LG *****************************  */}
-            <Col xs={12} xl={6}>
-              <Row className="tech-group down-lg">
-                <Col sm={12} className="text-center">
-                  <h4>Front-end</h4>
-                </Col>
-                <Col xs={4} sm={3}>
-                  <OverlayTrigger
-                    placement="right"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipReact}
-                  >
-                    <img src={reactIcon} alt="React logo" className="reactH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col xs={4} sm={3}>
-                  <OverlayTrigger
-                    placement="bottom"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipHTML}
-                  >
-                    <img src={htmlIcon} alt="HTML logo" className="htmlH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col xs={4} sm={3}>
-                  <OverlayTrigger
-                    placement="left"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipCSS}
-                  >
-                    <img src={cssIcon} alt="CSS logo" className="cssH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col xs={4} sm={3}>
-                  <OverlayTrigger
-                    placement="right"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipJs}
-                  >
-                    <img src={jsIcon} alt="JavaScript logo" className="jsH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col xs={4} sm={3}>
-                  <OverlayTrigger
-                    placement="bottom"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipTs}
-                  >
-                    <img src={tsIcon} alt="TypeScript logo" className="tsH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col xs={4} sm={3}>
-                  <OverlayTrigger
-                    placement="left"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipRedux}
-                  >
-                    <img src={reduxIcon} alt="Redux logo" className="reduxH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col xs={4} sm={3}>
-                  <OverlayTrigger
-                    placement="right"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipSass}
-                  >
-                    <img src={sassIcon} alt="Sass logo" className="sassH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col xs={4} sm={3}>
-                  <OverlayTrigger
-                    placement="bottom"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipBoot}
-                  >
-                    <img
-                      src={bootstrapIcon}
-                      alt="Bootstrap logo"
-                      className="bootH"
-                    />
-                  </OverlayTrigger>
-                </Col>
-              </Row>
+            <Row>
+              {/* LEFT BLOCK ** DOWN-LG *****************************  */}
+              <Col xs={12} xl={6}>
+                <Row className="tech-group down-lg">
+                  <Col sm={12} className="text-center">
+                    <h4>Front-end</h4>
+                  </Col>
+                  <Col xs={4} sm={3}>
+                    <OverlayTrigger
+                      placement="right"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipReact}
+                    >
+                      <img
+                        src={reactIcon}
+                        alt="React logo"
+                        className="reactH"
+                      />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col xs={4} sm={3}>
+                    <OverlayTrigger
+                      placement="bottom"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipHTML}
+                    >
+                      <img src={htmlIcon} alt="HTML logo" className="htmlH" />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col xs={4} sm={3}>
+                    <OverlayTrigger
+                      placement="left"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipCSS}
+                    >
+                      <img src={cssIcon} alt="CSS logo" className="cssH" />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col xs={4} sm={3}>
+                    <OverlayTrigger
+                      placement="right"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipJs}
+                    >
+                      <img src={jsIcon} alt="JavaScript logo" className="jsH" />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col xs={4} sm={3}>
+                    <OverlayTrigger
+                      placement="bottom"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipTs}
+                    >
+                      <img src={tsIcon} alt="TypeScript logo" className="tsH" />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col xs={4} sm={3}>
+                    <OverlayTrigger
+                      placement="left"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipRedux}
+                    >
+                      <img
+                        src={reduxIcon}
+                        alt="Redux logo"
+                        className="reduxH"
+                      />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col xs={4} sm={3}>
+                    <OverlayTrigger
+                      placement="right"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipSass}
+                    >
+                      <img src={sassIcon} alt="Sass logo" className="sassH" />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col xs={4} sm={3}>
+                    <OverlayTrigger
+                      placement="bottom"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipBoot}
+                    >
+                      <img
+                        src={bootstrapIcon}
+                        alt="Bootstrap logo"
+                        className="bootH"
+                      />
+                    </OverlayTrigger>
+                  </Col>
+                </Row>
 
-              {/* LEFT BLOCK ** UP-LG */}
-              <Row className="tech-group up-lg top">
-                <Col sm={12} className="text-center">
-                  <h4>Front-end</h4>
-                </Col>
-                <Col lg={4}>
-                  <OverlayTrigger
-                    placement="right"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipReact}
-                  >
-                    <img src={reactIcon} alt="React logo" className="reactH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col lg={4}>
-                  <OverlayTrigger
-                    placement="right"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipHTML}
-                  >
-                    <img src={htmlIcon} alt="HTML logo" className="htmlH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col lg={4}>
-                  <OverlayTrigger
-                    placement="left"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipCSS}
-                  >
-                    <img src={cssIcon} alt="CSS logo" className="cssH" />
-                  </OverlayTrigger>
-                </Col>
-              </Row>
+                {/* LEFT BLOCK ** UP-LG */}
+                <Row className="tech-group up-lg top">
+                  <Col sm={12} className="text-center">
+                    <h4>Front-end</h4>
+                  </Col>
+                  <Col lg={4}>
+                    <OverlayTrigger
+                      placement="right"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipReact}
+                    >
+                      <img
+                        src={reactIcon}
+                        alt="React logo"
+                        className="reactH"
+                      />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col lg={4}>
+                    <OverlayTrigger
+                      placement="right"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipHTML}
+                    >
+                      <img src={htmlIcon} alt="HTML logo" className="htmlH" />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col lg={4}>
+                    <OverlayTrigger
+                      placement="left"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipCSS}
+                    >
+                      <img src={cssIcon} alt="CSS logo" className="cssH" />
+                    </OverlayTrigger>
+                  </Col>
+                </Row>
 
-              <Row className="tech-group up-lg center">
-                <Col sm={12} className="text-center">
-                  <h4>&nbsp;</h4>
-                </Col>
-                <Col lg={4}>
-                  <OverlayTrigger
-                    placement="right"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipJs}
-                  >
-                    <img src={jsIcon} alt="JavaScript logo" className="jsH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col lg={4}>
-                  <OverlayTrigger
-                    placement="right"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipTs}
-                  >
-                    <img src={tsIcon} alt="TypeScript logo" className="tsH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col lg={4}>
-                  <OverlayTrigger
-                    placement="left"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipRedux}
-                  >
-                    <img src={reduxIcon} alt="Redux logo" className="reduxH" />
-                  </OverlayTrigger>
-                </Col>
-              </Row>
+                <Row className="tech-group up-lg center">
+                  <Col sm={12} className="text-center">
+                    <h4>&nbsp;</h4>
+                  </Col>
+                  <Col lg={4}>
+                    <OverlayTrigger
+                      placement="right"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipJs}
+                    >
+                      <img src={jsIcon} alt="JavaScript logo" className="jsH" />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col lg={4}>
+                    <OverlayTrigger
+                      placement="right"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipTs}
+                    >
+                      <img src={tsIcon} alt="TypeScript logo" className="tsH" />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col lg={4}>
+                    <OverlayTrigger
+                      placement="left"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipRedux}
+                    >
+                      <img
+                        src={reduxIcon}
+                        alt="Redux logo"
+                        className="reduxH"
+                      />
+                    </OverlayTrigger>
+                  </Col>
+                </Row>
 
-              <Row className="tech-group up-lg bottom">
-                <Col sm={12} className="text-center">
-                  <h4>&nbsp;</h4>
-                </Col>
-                <Col lg={4}>
-                  <OverlayTrigger
-                    placement="right"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipSass}
-                  >
-                    <img src={sassIcon} alt="Sass logo" className="sassH" />
-                  </OverlayTrigger>
-                </Col>
-                <Col lg={4}>
-                  <OverlayTrigger
-                    placement="right"
-                    delay={{ show: 100, hide: 100 }}
-                    overlay={renderTooltipBoot}
-                  >
-                    <img
-                      src={bootstrapIcon}
-                      alt="Bootstrap logo"
-                      className="bootH"
-                    />
-                  </OverlayTrigger>
-                </Col>
-              </Row>
-            </Col>
+                <Row className="tech-group up-lg bottom">
+                  <Col sm={12} className="text-center">
+                    <h4>&nbsp;</h4>
+                  </Col>
+                  <Col lg={4}>
+                    <OverlayTrigger
+                      placement="right"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipSass}
+                    >
+                      <img src={sassIcon} alt="Sass logo" className="sassH" />
+                    </OverlayTrigger>
+                  </Col>
+                  <Col lg={4}>
+                    <OverlayTrigger
+                      placement="right"
+                      delay={{ show: 100, hide: 100 }}
+                      overlay={renderTooltipBoot}
+                    >
+                      <img
+                        src={bootstrapIcon}
+                        alt="Bootstrap logo"
+                        className="bootH"
+                      />
+                    </OverlayTrigger>
+                  </Col>
+                </Row>
+              </Col>
 
-            {/* RIGHT BLOCK ***************************** */}
-            <Col xs={12} xl={6}>
-              <Row>
-                <Col xs={12} sm={6} xl={12}>
-                  <Row className="tech-group">
-                    <Col sm={12} className="text-center">
-                      <h4>Back-end</h4>
-                    </Col>
-                    <Col xs={4} sm={4}>
-                      <OverlayTrigger
-                        placement="right"
-                        delay={{ show: 100, hide: 100 }}
-                        overlay={renderTooltipNode}
-                      >
-                        <img
-                          src={nodeIcon}
-                          alt="Node.js logo"
-                          className="nodeH"
-                        />
-                      </OverlayTrigger>
-                    </Col>
-                    <Col xs={4} sm={4}>
-                      <OverlayTrigger
-                        placement="bottom"
-                        delay={{ show: 100, hide: 100 }}
-                        overlay={renderTooltipEx}
-                      >
-                        <img
-                          src={expressIcon}
-                          alt="Express logo"
-                          className="expH"
-                        />
-                      </OverlayTrigger>
-                    </Col>
-                    <Col xs={4} sm={4}>
-                      <OverlayTrigger
-                        placement="left"
-                        delay={{ show: 100, hide: 100 }}
-                        overlay={renderTooltipSQL}
-                      >
-                        <img
-                          src={mysqlIcon}
-                          alt="MySQL logo"
-                          className="sqlH"
-                        />
-                      </OverlayTrigger>
-                    </Col>
-                  </Row>
-                </Col>
+              {/* RIGHT BLOCK ***************************** */}
+              <Col xs={12} xl={6}>
+                <Row>
+                  <Col xs={12} sm={6} xl={12}>
+                    <Row className="tech-group">
+                      <Col sm={12} className="text-center">
+                        <h4>Back-end</h4>
+                      </Col>
+                      <Col xs={4} sm={4}>
+                        <OverlayTrigger
+                          placement="right"
+                          delay={{ show: 100, hide: 100 }}
+                          overlay={renderTooltipNode}
+                        >
+                          <img
+                            src={nodeIcon}
+                            alt="Node.js logo"
+                            className="nodeH"
+                          />
+                        </OverlayTrigger>
+                      </Col>
+                      <Col xs={4} sm={4}>
+                        <OverlayTrigger
+                          placement="bottom"
+                          delay={{ show: 100, hide: 100 }}
+                          overlay={renderTooltipEx}
+                        >
+                          <img
+                            src={expressIcon}
+                            alt="Express logo"
+                            className="expH"
+                          />
+                        </OverlayTrigger>
+                      </Col>
+                      <Col xs={4} sm={4}>
+                        <OverlayTrigger
+                          placement="left"
+                          delay={{ show: 100, hide: 100 }}
+                          overlay={renderTooltipSQL}
+                        >
+                          <img
+                            src={mysqlIcon}
+                            alt="MySQL logo"
+                            className="sqlH"
+                          />
+                        </OverlayTrigger>
+                      </Col>
+                    </Row>
+                  </Col>
 
-                <Col xs={12} sm={6} xl={12}>
-                  <Row className="tech-group">
-                    <Col sm={12} className="text-center">
-                      <h4>UX/UI Design</h4>
-                    </Col>
-                    <Col xs={4} sm={4}>
-                      <OverlayTrigger
-                        placement="right"
-                        delay={{ show: 100, hide: 100 }}
-                        overlay={renderTooltipPs}
-                      >
-                        <img
-                          src={psIcon}
-                          alt="Adobe Photoshop logo"
-                          className="psH"
-                        />
-                      </OverlayTrigger>
-                    </Col>
-                    <Col xs={4} sm={4}>
-                      <OverlayTrigger
-                        placement="bottom"
-                        delay={{ show: 100, hide: 100 }}
-                        overlay={renderTooltipAi}
-                      >
-                        <img
-                          src={aiIcon}
-                          alt="Adobe Illustrator logo"
-                          className="aiH"
-                        />
-                      </OverlayTrigger>
-                    </Col>
-                    <Col xs={4} sm={4}>
-                      <OverlayTrigger
-                        placement="left"
-                        delay={{ show: 100, hide: 100 }}
-                        overlay={renderTooltipFigma}
-                      >
-                        <img
-                          src={figmaIcon}
-                          alt="Figma logo"
-                          className="figH"
-                        />
-                      </OverlayTrigger>
-                    </Col>
-                  </Row>
-                </Col>
+                  <Col xs={12} sm={6} xl={12}>
+                    <Row className="tech-group">
+                      <Col sm={12} className="text-center">
+                        <h4>UX/UI Design</h4>
+                      </Col>
+                      <Col xs={4} sm={4}>
+                        <OverlayTrigger
+                          placement="right"
+                          delay={{ show: 100, hide: 100 }}
+                          overlay={renderTooltipPs}
+                        >
+                          <img
+                            src={psIcon}
+                            alt="Adobe Photoshop logo"
+                            className="psH"
+                          />
+                        </OverlayTrigger>
+                      </Col>
+                      <Col xs={4} sm={4}>
+                        <OverlayTrigger
+                          placement="bottom"
+                          delay={{ show: 100, hide: 100 }}
+                          overlay={renderTooltipAi}
+                        >
+                          <img
+                            src={aiIcon}
+                            alt="Adobe Illustrator logo"
+                            className="aiH"
+                          />
+                        </OverlayTrigger>
+                      </Col>
+                      <Col xs={4} sm={4}>
+                        <OverlayTrigger
+                          placement="left"
+                          delay={{ show: 100, hide: 100 }}
+                          overlay={renderTooltipFigma}
+                        >
+                          <img
+                            src={figmaIcon}
+                            alt="Figma logo"
+                            className="figH"
+                          />
+                        </OverlayTrigger>
+                      </Col>
+                    </Row>
+                  </Col>
 
-                <Col xs={12} sm={12}>
-                  <Row>
-                    <Col xs={8} sm={6} xl={8}>
-                      <Row className="tech-group  h-100">
-                        <Col sm={12} className="text-center">
-                          <h4>Version Control System</h4>
-                        </Col>
-                        <Col xs={6} sm={6}>
-                          <OverlayTrigger
-                            placement="right"
-                            delay={{ show: 100, hide: 100 }}
-                            overlay={renderTooltipGit}
-                          >
-                            <img
-                              src={gitIcon}
-                              alt="Git logo"
-                              className="gitH"
-                            />
-                          </OverlayTrigger>
-                        </Col>
-                        <Col xs={6} sm={6}>
-                          <OverlayTrigger
-                            placement="bottom"
-                            delay={{ show: 100, hide: 100 }}
-                            overlay={renderTooltipGithub}
-                          >
-                            <img
-                              src={githubIcon}
-                              alt="Github logo"
-                              className="githubH"
-                            />
-                          </OverlayTrigger>
-                        </Col>
-                      </Row>
-                    </Col>
+                  <Col xs={12} sm={12}>
+                    <Row>
+                      <Col xs={8} sm={6} xl={8}>
+                        <Row className="tech-group  h-100">
+                          <Col sm={12} className="text-center">
+                            <h4>Version Control System</h4>
+                          </Col>
+                          <Col xs={6} sm={6}>
+                            <OverlayTrigger
+                              placement="right"
+                              delay={{ show: 100, hide: 100 }}
+                              overlay={renderTooltipGit}
+                            >
+                              <img
+                                src={gitIcon}
+                                alt="Git logo"
+                                className="gitH"
+                              />
+                            </OverlayTrigger>
+                          </Col>
+                          <Col xs={6} sm={6}>
+                            <OverlayTrigger
+                              placement="bottom"
+                              delay={{ show: 100, hide: 100 }}
+                              overlay={renderTooltipGithub}
+                            >
+                              <img
+                                src={githubIcon}
+                                alt="Github logo"
+                                className="githubH"
+                              />
+                            </OverlayTrigger>
+                          </Col>
+                        </Row>
+                      </Col>
 
-                    <Col xs={4} sm={6} xl={4}>
-                      <Row className="tech-group h-100">
-                        <Col sm={12} className="text-center agile-title">
-                          <h4>Agile Method</h4>
-                        </Col>
-                        <Col>
-                          <OverlayTrigger
-                            placement="left"
-                            delay={{ show: 100, hide: 100 }}
-                            overlay={renderTooltipScrum}
-                          >
-                            <img
-                              src={scrumIcon}
-                              alt="SCRUM icon"
-                              className="scrumH"
-                            />
-                          </OverlayTrigger>
-                        </Col>
-                      </Row>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
+                      <Col xs={4} sm={6} xl={4}>
+                        <Row className="tech-group h-100">
+                          <Col sm={12} className="text-center agile-title">
+                            <h4>Agile Method</h4>
+                          </Col>
+                          <Col>
+                            <OverlayTrigger
+                              placement="left"
+                              delay={{ show: 100, hide: 100 }}
+                              overlay={renderTooltipScrum}
+                            >
+                              <img
+                                src={scrumIcon}
+                                alt="SCRUM icon"
+                                className="scrumH"
+                              />
+                            </OverlayTrigger>
+                          </Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Fade>
         </div>
       </Container>
     </section>
