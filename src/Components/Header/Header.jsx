@@ -4,7 +4,8 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import TrackVisibility from "react-on-screen";
 import ship from "../../assets/ship/ship.svg";
 import arrowDown from "../../assets/icons/arrow_down.svg";
-import "animate.css";
+import { Zoom } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import "./header.scss";
 
 export const Header = () => {
@@ -65,12 +66,8 @@ export const Header = () => {
         <Row className="align-items-center">
           <Col xs={12} sm={12} lg={7}>
             <TrackVisibility once>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
+              <Fade>
+                <div>
                   <span className="tagline">Welcome to my Universe</span>
                   <h1>
                     {`Hi, I'm Franco`} <br />
@@ -93,21 +90,17 @@ export const Header = () => {
                     Let's connect <ArrowRightCircle size={25} />
                   </a>
                 </div>
-              )}
+              </Fade>
             </TrackVisibility>
           </Col>
 
           <Col xs={12} sm={12} lg={5} className="ship-container">
             <TrackVisibility once>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
-                  }
-                >
+              <Zoom triggerOnce={true}>
+                <div>
                   <img className="ship" src={ship} alt="Header img" />
                 </div>
-              )}
+              </Zoom>
             </TrackVisibility>
           </Col>
 

@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { HashLink } from "react-router-hash-link";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
 import logo from "../../assets/logo/logo.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
 import github from "../../assets/icons/github.svg";
@@ -33,11 +31,9 @@ export const NavBar = () => {
     setActiveLink(value);
   };
 
-  const renderTooltipDownload = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Work in progress!
-    </Tooltip>
-  );
+  const handleAboutMe = (value) => {
+    setActiveLink(value);
+  };
 
   return (
     <Navbar collapseOnSelect expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -50,40 +46,39 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link
-              href="#home"
-              className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("home")}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="#tech-stack"
-              className={
-                activeLink === "Skills" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("skills")}
-            >
-              Tech stack
-            </Nav.Link>
-            <Nav.Link
-              href="#project"
-              className={
-                activeLink === "Projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              Projects
-            </Nav.Link>
-            <NavDropdown
-              title="Download"
-              id="collasible-nav-dropdown"
-              className={
-                activeLink === "Projects" ? "active navbar-link" : "navbar-link"
-              }
-            >
+            <HashLink to="/#home">
+              <Nav
+                className={
+                  activeLink === "home" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("home")}
+              >
+                <span> Home</span>
+              </Nav>
+            </HashLink>
+            <HashLink to="/#tech-stack">
+              <Nav
+                className={
+                  activeLink === "skills" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("skills")}
+              >
+                <span> Tech stack</span>
+              </Nav>
+            </HashLink>
+            <HashLink to="/#project">
+              <Nav
+                className={
+                  activeLink === "projects"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("projects")}
+              >
+                <span>Projects</span>
+              </Nav>
+            </HashLink>
+            <NavDropdown title="Download" id="collasible-nav-dropdown">
               <NavDropdown.Item href={cv} download="franco_amoroso_cv_2022_en">
                 Curriculum Vitae
               </NavDropdown.Item>
@@ -98,23 +93,20 @@ export const NavBar = () => {
           </Nav>
 
           <span className="navbar-text">
-            <Nav>
-              <OverlayTrigger
-                placement="bottom"
-                delay={{ show: 100, hide: 100 }}
-                overlay={renderTooltipDownload}
-              >
-                <Nav.Link
+            <HashLink to={{ pathname: "/aboutme", hash: "#aboutme" }}>
+              <Nav>
+                <Nav
                   className={`aboutMe ${
-                    activeLink === "Projects"
+                    activeLink === "about"
                       ? "active navbar-link"
                       : "navbar-link"
                   }`}
+                  onClick={() => handleAboutMe("about")}
                 >
-                  About me
-                </Nav.Link>
-              </OverlayTrigger>
-            </Nav>
+                  <span> About me</span>
+                </Nav>
+              </Nav>
+            </HashLink>
             <div className="social-icon">
               <a
                 target="_blank"

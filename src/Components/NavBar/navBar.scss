@@ -18,11 +18,11 @@ nav.navbar {
     }
   }
   .navbar-nav {
-    .nav-link.navbar-link,
+    .navbar-link.navbar-nav,
     .dropdown-toggle.nav-link {
       font-weight: 400;
-      color: #fff !important;
       letter-spacing: $letter-spacing-08;
+      color: white !important;
       padding: 0 25px;
       font-size: 18px;
       opacity: 0.75;
@@ -30,8 +30,9 @@ nav.navbar {
         font-size: 12px;
       }
     }
-    a.nav-link.navbar-link:hover,
-    a.nav-link.navbar-link.active {
+    .navbar-link.navbar-nav:hover,
+    .dropdown-toggle.nav-link:hover,
+    .navbar-link.navbar-nav.active {
       opacity: 1;
     }
   }

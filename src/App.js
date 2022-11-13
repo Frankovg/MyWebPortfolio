@@ -6,7 +6,8 @@ import { NavBar } from "./Components/NavBar/NavBar";
 import { Footer } from "./Components/Footer/Footer";
 import { Home } from "./Pages/Home/Home";
 import { Helmet } from "react-helmet-async";
-import { ErrorPage } from "./Components/Error/ErrorPage";
+import { ErrorPage } from "./Pages/Error/404";
+import { AboutMe } from "./Pages/AboutMe/AboutMe";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
       <Footer />

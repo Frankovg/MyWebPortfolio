@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import TrackVisibility from "react-on-screen";
+import { Fade } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 import planet from "../../assets/ship/planet.svg";
 import SendCustomEmail from "../../SendCustomEmail";
 import validator from "validator";
-import "animate.css";
 import "./contact.scss";
 import { Success } from "../Modals/Success";
 
@@ -60,25 +61,17 @@ export const Contact = () => {
           <Row className="align-items-center">
             <Col sm={4} xl={6}>
               <TrackVisibility partialVisibility>
-                {({ isVisible }) => (
-                  <img
-                    className={
-                      isVisible ? "animate__animated animate__zoomIn" : ""
-                    }
-                    src={planet}
-                    alt="Contact Us"
-                  />
-                )}
+                <Zoom triggerOnce={true}>
+                  <div className="station">
+                    <img src={planet} alt="Contact Us" />
+                  </div>
+                </Zoom>
               </TrackVisibility>
             </Col>
             <Col sm={8} xl={6}>
               <TrackVisibility partialVisibility>
-                {({ isVisible }) => (
-                  <div
-                    className={
-                      isVisible ? "animate__animated animate__fadeIn" : ""
-                    }
-                  >
+                <Fade>
+                  <div>
                     <h2>Get In Touch</h2>
                     <form onSubmit={handleSubmit}>
                       <Row>
@@ -108,7 +101,7 @@ export const Contact = () => {
                           <textarea
                             rows="6"
                             value={formDetails.message}
-                            placeholder="*Message"
+                            placeholder="*Message - También puedes escribirme en español."
                             onChange={(e) =>
                               onFormUpdate("message", e.target.value)
                             }
@@ -141,7 +134,7 @@ export const Contact = () => {
                       </Row>
                     </form>
                   </div>
-                )}
+                </Fade>
               </TrackVisibility>
             </Col>
           </Row>
