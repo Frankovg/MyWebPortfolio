@@ -57,9 +57,9 @@ export const Footer = () => {
                   rel="noreferrer"
                   href="https://www.freepik.es/vector-gratis/nave-espacial-espacio-exterior-planetas-o-asteroides_8308810.htm#query=space%20ship&position=0&from_view=search&track=sph"
                 >
-                  Imagen de upklyak
+                  Space pictures by upklyak
                 </a>{" "}
-                en Freepik
+                at Freepik
               </p>
             </Col>
           </Row>

@@ -1,12 +1,12 @@
-import "./app.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Particles from "./Components/Particles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavBar } from "./Components/NavBar/NavBar";
 import { Footer } from "./Components/Footer/Footer";
-import { Home } from "./Pages/Home/Home";
 import { Helmet } from "react-helmet-async";
 import { ErrorPage } from "./Pages/Error/404";
+import "./app.scss";
+import { Home } from "./Pages/Home/Home";
 import { AboutMe } from "./Pages/AboutMe/AboutMe";
 
 function App() {
@@ -23,11 +23,13 @@ function App() {
         <link rel="canonical" href="https://www.franamoroso.com/" />
       </Helmet>
       <NavBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutme" element={<AboutMe />} />
-        <Route path="/*" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
+
       <Footer />
       <Particles id="tsparticles" />
     </BrowserRouter>
