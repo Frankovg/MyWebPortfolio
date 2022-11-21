@@ -29,7 +29,7 @@ const industrialDesigns = [
   {
     type: "industrial",
     title: "Grupo Quiero",
-    description: "Retail design, branding, look & feel",
+    description: "Retail Design, Branding, Look & Feel",
     imgUrl: quiero,
     info: "Working at Grupo Quiero was the best experience I ever had as an Industrial Designer. There, I had the opportunity to work with the biggest companies in the world developing projects for all LATAM. I have to say that it is hard to select just a few examples after years with them.",
     repo: "",

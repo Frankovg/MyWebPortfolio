@@ -1,5 +1,10 @@
 @import "../../variables";
 
+:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
 .faq {
   h2 {
     font-size: 45px;
@@ -31,9 +36,11 @@
     color: $purpleLogo !important;
   }
   .accordion {
-    --bs-accordion-bg: transparent;
-    --bs-accordion-border-width: none;
-    --bs-accordion-active-color: transparent;
+    --bs-accordion-bg: transparent !important;
+    --bs-accordion-border-width: 0px !important;
+    // --bs-accordion-border-radius: 0px !important;
+    // --bs-accordion-active-color: transparent !important;
+    // --bs-accordion-btn-focus-border-color: transparent !important;
     .accordion-collapse,
     .accordion-button {
       color: white;
@@ -68,6 +75,59 @@
     background-color: transparent;
   }
   .faq-content {
+    .clients,
+    .jobs {
+      div {
+        display: flex;
+        justify-content: center;
+        padding-block: 12px;
+        img {
+          // width: 100%;
+          max-width: 100px;
+          min-width: 55px;
+          max-height: 30px;
+          // margin: 1.5rem;
+        }
+        img:hover {
+          filter: $cyanLogoFilter;
+          transform: scale(1.05);
+        }
+      }
+    }
+    .hobbie-bx {
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        max-width: 150px;
+        @include transition-icon;
+      }
+      p {
+        max-width: 80%;
+        margin-bottom: 1.2rem;
+        font-weight: 400;
+      }
+      @include max-medium {
+        flex-direction: row !important;
+        p {
+          margin-block: 0px;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .hobbie-bx:hover {
+      background-color: $grey-transp;
+      img {
+        filter: $cyanLogoFilter;
+        transform: scale(1.05);
+      }
+    }
+    .study-bx {
+      .where {
+        font-size: 12px;
+      }
+    }
     .study-bx:hover {
       background-color: $grey-transp;
       h5 {
@@ -83,5 +143,10 @@
       font-weight: 400;
       margin-block: 0.8rem;
     }
+    .toRecomm {
+      margin-top: 1rem;
+      @include arrowright;
+    }
+    @include arrowright-hover;
   }
 }

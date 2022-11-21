@@ -16,14 +16,18 @@ export const MySelf = () => {
             <TrackVisibility once>
               <Fade>
                 <div>
-                  <span className="tagline">Welcome to my Universe</span>
-                  <h1>Holaaaaaaaaaaaaa</h1>
+                  <span className="tagline">Hello everyone! I'm</span>
+                  <h1>Franco Gabriel Amoroso</h1>
                   <p>
-                    My current focus is on developing web apps especially on the
-                    Front-end. My background is an Industrial Designer and I
-                    have a solid expertise working for big companies around the
-                    world. <br /> I hope you enjoy this trip I have made for you
-                    and feel free to contact me.
+                    My relationship with technology started when I was a child
+                    and it has become my passion forever. That's because my
+                    father used to have a computer store in the 90's, so I grew
+                    up surrounded by old computers. But in those years that was
+                    really cool plus the new era of the internet! <br /> The
+                    universe of software and hardware was always natural for me
+                    and, of course, it is my favorite hobby and tool. That's why
+                    I have always dedicated my professional life around
+                    technology.
                   </p>
                 </div>
               </Fade>
