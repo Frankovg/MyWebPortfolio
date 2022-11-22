@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
-import { ArrowRightCircle } from "react-bootstrap-icons";
 import { Fade } from "react-awesome-reveal";
 import { Cv } from "./Cv";
 import { Education } from "./Education";
@@ -9,6 +8,8 @@ import { Hobbies } from "./Hobbies";
 import "./myInfo.scss";
 import { Clients } from "./Clients";
 import { Jobs } from "./Jobs";
+import { Why } from "./Why";
+import { Recommendation } from "./Recommendation";
 
 export const MyInfo = () => {
   return (
@@ -56,14 +57,7 @@ export const MyInfo = () => {
                     Why did I move to software development?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    <Why />
                   </Accordion.Body>
                 </Accordion.Item>
 
@@ -84,16 +78,7 @@ export const MyInfo = () => {
                 <Accordion.Item eventKey="6">
                   <Accordion.Header>LinkedIn recommendations</Accordion.Header>
                   <Accordion.Body>
-                    <a
-                      className="toRecomm"
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.linkedin.com/in/francoamoroso/details/recommendations/?detailScreenTabIndex=0"
-                    >
-                      To my LinkedIn <ArrowRightCircle size={25} />
-                    </a>
-                    <br />
-                    Don't be shy and send me a contact request 😉.
+                    <Recommendation />
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
