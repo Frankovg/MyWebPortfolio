@@ -39,7 +39,7 @@ export const Cv = () => {
             onClick={() => handleDone("on-cv-sp")}
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/1uk60yd1C5uLzKCiOG6LEsb413DLPV_l_/view?usp=share_link"
+            href="https://drive.google.com/file/d/1NqNxNdIdMGxJu0e-mBCYpAudMmikRE7t/view?usp=share_link"
             className={`mb-1 cv-link ${done1}`}
           >
             Curriculum Vitae - SPANISH
@@ -49,7 +49,7 @@ export const Cv = () => {
             onClick={() => handleDone("on-cv-en")}
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/1HVtHa43eL8E94e4DB7IwMfvXwVNjH1zt/view?usp=share_link"
+            href="https://drive.google.com/file/d/13plFQRSihC6QLco2uky6_oZmPUrxzyBg/view?usp=share_link"
             className={`mb-1 cv-link ${done2}`}
           >
             Curriculum Vitae - ENGLISH
@@ -58,7 +58,7 @@ export const Cv = () => {
             onClick={() => handleDone("on-pf")}
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/1VKtBB-k9EU19sKomBrv7-Tn5CQBbmVh5/view?usp=sharing"
+            href="https://drive.google.com/file/d/19sCWPKeUKf-_3QqMk4a49C9fzWdKyz72/view?usp=share_link"
             className={`mb-1 cv-link ${done3}`}
           >
             Portfolio - ENGLISH

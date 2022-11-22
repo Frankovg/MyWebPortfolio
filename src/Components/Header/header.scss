@@ -31,6 +31,7 @@
     }
   }
   p {
+    z-index: 999;
     @include parrafo;
     width: 96%;
     max-width: 576px;
@@ -54,10 +55,12 @@
     display: flex;
     align-items: flex-start;
     @include max-extrasmall {
-      justify-content: center !important;
       .ship {
         width: 80vw;
       }
+    }
+    @include max-large {
+      justify-content: center !important;
     }
   }
 }
