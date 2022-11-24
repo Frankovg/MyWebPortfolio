@@ -41,7 +41,7 @@ export const Footer = () => {
               sm={12}
               className="d-flex justify-content-center text-center mod"
             >
-              <p>Last modified: 11-04-2022</p>
+              <p>Last modified: November 2022</p>
             </Col>
 
             <Col

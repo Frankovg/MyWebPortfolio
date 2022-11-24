@@ -79,7 +79,7 @@ export const NavBar = () => {
               </Nav>
             </HashLink>
             <NavDropdown title="Download" id="collasible-nav-dropdown">
-              <NavDropdown.Item href={cv} download="franco_amoroso_cv_2022_en">
+              <NavDropdown.Item href={cv} download="Franco_Amoroso_cv_2022_en">
                 Curriculum Vitae
               </NavDropdown.Item>
               <NavDropdown.Item

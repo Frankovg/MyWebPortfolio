@@ -12,9 +12,8 @@ export const Education = () => {
         </div>
         <div>
           <p>
-            An intense 16 weeks (630 hours) long bootcamp where I gained a solid
-            base of programming with JavaScript and how to develop Web
-            Applications.
+            An intense 16 weeks (630 hours) bootcamp where I gained a solid base
+            of programming with JavaScript and how to develop Web Applications.
           </p>
           <p>
             Training with the most demanded technologies of the market like
@@ -32,8 +31,8 @@ export const Education = () => {
         </div>
         <div>
           <p>
-            The CS50 is an 200 hours introduction to the intellectual
-            enterprises of computer science and the art of programming.
+            The CS50 is a 200 hours introduction to the intellectual enterprises
+            of computer science and the art of programming.
           </p>
           <p>
             Topics include abstraction, algorithms, data structures,
