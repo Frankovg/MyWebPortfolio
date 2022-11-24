@@ -58,7 +58,7 @@ export const Cv = () => {
             onClick={() => handleDone("on-pf")}
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/19sCWPKeUKf-_3QqMk4a49C9fzWdKyz72/view?usp=share_link"
+            href="https://drive.google.com/file/d/1A1fiQ9RvR7K9lRpmFcUQMMhMPpz8X9Sa/view?usp=share_link"
             className={`mb-1 cv-link ${done3}`}
           >
             Portfolio - ENGLISH

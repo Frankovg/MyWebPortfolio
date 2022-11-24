@@ -20,14 +20,14 @@ export const MySelf = () => {
                   <h1>Franco Gabriel Amoroso</h1>
                   <p>
                     My relationship with technology started when I was a child
-                    and it has become my passion forever. That's because my
+                    and it has been my passion since then. That's because my
                     father used to have a computer store in the 90's, so I grew
-                    up surrounded by old computers. But in those years that was
-                    really cool plus the new era of the internet! <br /> The
-                    universe of software and hardware was always natural for me
-                    and, of course, it is my favorite hobby and tool. That's why
-                    I have always dedicated my professional life around
-                    technology.
+                    up surrounded by old computers. In those years that was
+                    really cool! Plus, it was the new era of the internet.{" "}
+                    <br /> The universe of software and hardware have always
+                    felt natural to me and, of course, it is my favorite hobby
+                    and tool. That's why I have always dedicated my professional
+                    life around technology.
                   </p>
                 </div>
               </Fade>
