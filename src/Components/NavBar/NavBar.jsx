@@ -93,7 +93,7 @@ export const NavBar = () => {
           </Nav>
 
           <span className="navbar-text">
-            <HashLink to={{ pathname: "/aboutme", hash: "#aboutme" }}>
+            <HashLink to={{ pathname: "/aboutme/", hash: "#aboutme" }}>
               <Nav>
                 <Nav
                   className={`aboutMe ${
