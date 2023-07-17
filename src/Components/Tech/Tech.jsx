@@ -23,11 +23,13 @@ import scrumIcon from "../../assets/icons/scrum.svg";
 import tsIcon from "../../assets/icons/ts.svg";
 
 export const Tech = () => {
-  const renderTooltipReact = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A JavaScript library for building user interfaces.
-    </Tooltip>
-  );
+  const renderTooltipReact = (props) => {
+    return (
+      <Tooltip id="button-tooltip" {...props}>
+        A JavaScript library for building user interfaces.
+      </Tooltip>
+    );
+  };
   const renderTooltipHTML = (props) => (
     <Tooltip id="button-tooltip" {...props}>
       A standard markup language for web page creation.
@@ -139,6 +141,7 @@ export const Tech = () => {
                       placement="right"
                       delay={{ show: 100, hide: 100 }}
                       overlay={renderTooltipReact}
+                      type="react"
                     >
                       <img
                         src={reactIcon}
