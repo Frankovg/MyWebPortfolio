@@ -4,9 +4,13 @@ import Container from "react-bootstrap/Container";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Carousel from "react-bootstrap/Carousel";
+
+//Components
 import github from "../../../assets/icons/github.svg";
 import youtube from "../../../assets/icons/youtube.svg";
 import openBrowser from "../../../assets/icons/open.svg";
+
+//Styles
 import "./projectModal.scss";
 
 export const ProjectModal = ({ project, show, onHide }) => {

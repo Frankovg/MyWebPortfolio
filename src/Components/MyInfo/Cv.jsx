@@ -1,30 +1,50 @@
-import React, { useState } from "react";
+import React from "react";
+
+//Components
 import ListGroup from "react-bootstrap/ListGroup";
+
+//Files
 import cv from "../../assets/cv/Franco_Amoroso_cv_2022_en.pdf";
 import portfolio from "../../assets/portfolio/amoroso_franco_portfolio22_desktop.pdf";
 
 export const Cv = () => {
-  const [done1, setDone1] = useState("");
-  const [done2, setDone2] = useState("");
-  const [done3, setDone3] = useState("");
-  const [done4, setDone4] = useState("");
-  const [done5, setDone5] = useState("");
+  const downloadLinks = [
+    {
+      id: "0",
+      href: "https://drive.google.com/file/d/1NqNxNdIdMGxJu0e-mBCYpAudMmikRE7t/view?usp=share_link",
+      seen: false,
+      title: "Curriculum Vitae - SPANISH",
+    },
+    {
+      id: "1",
+      href: "https://drive.google.com/file/d/1A1fiQ9RvR7K9lRpmFcUQMMhMPpz8X9Sa/view?usp=drive_link",
+      seen: false,
+      title: "Curriculum Vitae - ENGLISH",
+    },
+    {
+      id: "2",
+      href: "https://drive.google.com/file/d/19sCWPKeUKf-_3QqMk4a49C9fzWdKyz72/view?usp=sharing",
+      seen: false,
+      title: "Portfolio - ENGLISH",
+    },
+  ];
 
-  const handleDone = (type) => {
-    const done = "done";
-
-    if (type === "on-cv-sp") {
-      setDone1(done);
-    } else if (type === "on-cv-en") {
-      setDone2(done);
-    } else if (type === "on-pf") {
-      setDone3(done);
-    } else if (type === "dl-cv-en") {
-      setDone4(done);
-    } else if (type === "dl-pf") {
-      setDone5(done);
-    }
-  };
+  const downloadFiles = [
+    {
+      id: "0",
+      href: cv,
+      seen: false,
+      name: "franco_amoroso_cv_2022_en",
+      title: "Curriculum Vitae - ENGLISH",
+    },
+    {
+      id: "1",
+      href: portfolio,
+      seen: false,
+      name: "franco_amoroso_portfolio_2022_en",
+      title: "Portfolio - ENGLISH",
+    },
+  ];
 
   return (
     <ListGroup as="ol">
@@ -34,63 +54,41 @@ export const Cv = () => {
       >
         <div className="ms-2 me-auto d-flex flex-column">
           <div className="fw-bold mb-2">Google Drive</div>
-
-          <a
-            onClick={() => handleDone("on-cv-sp")}
-            target="_blank"
-            rel="noreferrer"
-            href="https://drive.google.com/file/d/1NqNxNdIdMGxJu0e-mBCYpAudMmikRE7t/view?usp=share_link"
-            className={`mb-1 cv-link ${done1}`}
-          >
-            Curriculum Vitae - SPANISH
-          </a>
-
-          <a
-            onClick={() => handleDone("on-cv-en")}
-            target="_blank"
-            rel="noreferrer"
-            href="https://drive.google.com/file/d/13plFQRSihC6QLco2uky6_oZmPUrxzyBg/view?usp=share_link"
-            className={`mb-1 cv-link ${done2}`}
-          >
-            Curriculum Vitae - ENGLISH
-          </a>
-          <a
-            onClick={() => handleDone("on-pf")}
-            target="_blank"
-            rel="noreferrer"
-            href="https://drive.google.com/file/d/19sCWPKeUKf-_3QqMk4a49C9fzWdKyz72/view?usp=sharing"
-            className={`mb-1 cv-link ${done3}`}
-          >
-            Portfolio - ENGLISH
-          </a>
+          {downloadLinks.map((link, idx) => {
+            return (
+              <a
+                key={idx}
+                target="_blank"
+                rel="noreferrer"
+                href={link.href}
+                className={`mb-1 cv-link`}
+              >
+                {link.title}
+              </a>
+            );
+          })}
         </div>
       </ListGroup.Item>
       <ListGroup.Item
         as="li"
         className="d-flex justify-content-between align-items-start"
       >
-        <div className="ms-2 me-auto  d-flex flex-column">
+        <div className="ms-2 me-auto d-flex flex-column">
           <div className="fw-bold mb-2">Download</div>
-          <a
-            onClick={() => handleDone("dl-cv-en")}
-            target="_blank"
-            rel="noreferrer"
-            href={cv}
-            className={`mb-1 cv-link ${done4}`}
-            download="franco_amoroso_cv_2022_en"
-          >
-            Curriculum Vitae - ENGLISH
-          </a>
-          <a
-            onClick={() => handleDone("dl-pf")}
-            target="_blank"
-            rel="noreferrer"
-            href={portfolio}
-            className={`mb-1 cv-link ${done5}`}
-            download="franco_amoroso_portfolio_2022_en"
-          >
-            Portfolio - ENGLISH
-          </a>
+          {downloadFiles.map((file, idx) => {
+            return (
+              <a
+                key={idx}
+                target="_blank"
+                rel="noreferrer"
+                href={file.href}
+                className={`mb-1 cv-link`}
+                download={file.name}
+              >
+                {file.title}
+              </a>
+            );
+          })}
         </div>
       </ListGroup.Item>
     </ListGroup>

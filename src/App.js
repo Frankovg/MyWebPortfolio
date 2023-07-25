@@ -1,13 +1,17 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import Particles from "./Components/Particles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { NavBar } from "./Components/NavBar/NavBar";
-import { Footer } from "./Components/Footer/Footer";
+import Particles from "./Components/Particles";
 import { Helmet } from "react-helmet-async";
-import { ErrorPage } from "./Pages/Error/404";
-import "./app.scss";
+
+//Components
 import { Home } from "./Pages/Home/Home";
+import { NavBar } from "./Components/NavBar/NavBar";
+import { ErrorPage } from "./Pages/Error/404";
+import { Footer } from "./Components/Footer/Footer";
 import { AboutMe } from "./Pages/AboutMe/AboutMe";
+
+//Styles
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./app.scss";
 
 function App() {
   return (

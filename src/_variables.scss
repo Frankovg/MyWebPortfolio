@@ -131,12 +131,6 @@ $mobile-title: 2rem;
   }
 }
 
-// @mixin max-700-H {
-//   @media only screen and (max-height: 700px) {
-//     @content;
-//   }
-// }
-
 @mixin max-medium {
   @media only screen and (max-width: 768px) {
     @content;
@@ -166,12 +160,6 @@ $mobile-title: 2rem;
     @content;
   }
 }
-
-// @mixin max-1100-H {
-//   @media only screen and (max-height: 1100px) {
-//     @content;
-//   }
-// }
 
 @mixin b-992-1200 {
   @media only screen and (min-width: 992px) and (max-width: 1199px) {

@@ -10,6 +10,7 @@
   min-height: 214px;
   object-fit: cover;
   object-position: center;
+  cursor: pointer;
   @include max-767-H {
     max-height: 214px !important;
   }
@@ -38,9 +39,8 @@
       font-size: 15px;
       letter-spacing: $letter-spacing-08;
     }
-    button {
-      background-color: transparent;
-      border: none;
+    p {
+      color: white;
       font-size: 3rem;
       margin: 0px;
       width: 10%;
@@ -48,7 +48,7 @@
       padding: 0px;
       @include transition-icon;
     }
-    button:hover {
+    p:hover {
       transform: scale(1.5);
     }
   }

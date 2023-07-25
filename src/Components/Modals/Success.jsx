@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
+
+//Styles
 import "./ProjectModal/projectModal.scss";
 import "./success.scss";
 

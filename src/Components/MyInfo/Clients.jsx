@@ -1,5 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+
+//Images
 import amstel from "../../assets/clients/amstel.svg";
 import axe from "../../assets/clients/axe.svg";
 import cocacola from "../../assets/clients/cocacola.svg";
@@ -25,81 +27,115 @@ import viacelere from "../../assets/clients/viacelere.svg";
 import vichy from "../../assets/clients/vichy.svg";
 import volkswagen from "../../assets/clients/volkswagen.svg";
 
+const logos = [
+  {
+    brand: "Amstel",
+    img: amstel,
+  },
+  {
+    brand: "AXE",
+    img: axe,
+  },
+  {
+    brand: "Coca-Cola",
+    img: cocacola,
+  },
+  {
+    brand: "Coty",
+    img: coty,
+  },
+  {
+    brand: "Cruz Campo",
+    img: cruzcampo,
+  },
+  {
+    brand: "El Águila",
+    img: elaguila,
+  },
+  {
+    brand: "Garnier",
+    img: garnier,
+  },
+  {
+    brand: "Gillete",
+    img: gillette,
+  },
+  {
+    brand: "Johnsons & Johnsons",
+    img: johnsons,
+  },
+  {
+    brand: "L'Oréal Paris",
+    img: loreal,
+  },
+  {
+    brand: "Maybelline",
+    img: maybelline,
+  },
+  {
+    brand: "Mondeléz",
+    img: mondelez,
+  },
+  {
+    brand: "Movistar",
+    img: movistar,
+  },
+  {
+    brand: "Nestlé",
+    img: nestle,
+  },
+  {
+    brand: "New Balance",
+    img: newbalance,
+  },
+  {
+    brand: "P&G",
+    img: pg,
+  },
+  {
+    brand: "Pepsico",
+    img: pepsico,
+  },
+  {
+    brand: "Refresco",
+    img: refresco,
+  },
+  {
+    brand: "Rimmel",
+    img: rimmel,
+  },
+  {
+    brand: "Sally Hansen",
+    img: sallyhansen,
+  },
+  {
+    brand: "Unilever",
+    img: unilever,
+  },
+  {
+    brand: "Via Célere",
+    img: viacelere,
+  },
+  {
+    brand: "Vichy",
+    img: vichy,
+  },
+  {
+    brand: "Volkswagen",
+    img: volkswagen,
+  },
+];
+
 export const Clients = () => {
   return (
     <Row className="clients">
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={amstel} alt="Amstel" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={axe} alt="Axe" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={cocacola} alt="Coca Cola" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={coty} alt="Coty" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={cruzcampo} alt="Cruz Campo" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={elaguila} alt="El Águila" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={garnier} alt="Garnier" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={gillette} alt="Gillette" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={johnsons} alt="Johnson & Johnson" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={loreal} alt="L'Oréal Paris" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={maybelline} alt="Maybelline" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={mondelez} alt="Mondeléz" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={movistar} alt="Movistar" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={nestle} alt="Nestlé" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={newbalance} alt="New Balance" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={pg} alt="P&G" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={pepsico} alt="Pepsico" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={refresco} alt="Refresco" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={rimmel} alt="Rimmel" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={sallyhansen} alt="Sally Hansen" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={unilever} alt="Unilever" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={viacelere} alt="Vía Célere" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={vichy} alt="Vichy" />
-      </Col>
-      <Col xs={4} sm={3} md={2} lg={1}>
-        <img src={volkswagen} alt="Volkswagen" />
-      </Col>
+      {logos.map((logo, idx) => {
+        return (
+          <Col key={idx} xs={4} sm={3} md={2} lg={1}>
+            <img src={logo.img} alt={logo.brand} />
+          </Col>
+        );
+      })}
     </Row>
   );
 };

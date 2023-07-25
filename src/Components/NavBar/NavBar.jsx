@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
+
+//Components
 import { Navbar, Container, Nav } from "react-bootstrap";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-import { HashLink } from "react-router-hash-link";
+//Icons
 import logo from "../../assets/logo/logo.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
 import github from "../../assets/icons/github.svg";
+
+//Downloads
 import cv from "../../assets/cv/Franco_Amoroso_cv_2022_en.pdf";
 import portfolio from "../../assets/portfolio/amoroso_franco_portfolio22_desktop.pdf";
+
+//Styles
 import "./navBar.scss";
 
 export const NavBar = () => {
@@ -126,11 +133,7 @@ export const NavBar = () => {
             </div>
 
             <HashLink to="#connect">
-              <button
-                id="toConnect"
-                className="vvd"
-                onClick={() => console.log("connect")}
-              >
+              <button id="toConnect" className="vvd">
                 <span>Let's Connect</span>
               </button>
             </HashLink>

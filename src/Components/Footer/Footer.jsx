@@ -1,9 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Fade } from "react-awesome-reveal";
+
+//Components
 import logo from "../../assets/logo/logo.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
 import github from "../../assets/icons/github.svg";
-import { Fade } from "react-awesome-reveal";
+
+//Styles
 import "./footer.scss";
 
 export const Footer = () => {
@@ -41,7 +45,7 @@ export const Footer = () => {
               sm={12}
               className="d-flex justify-content-center text-center mod"
             >
-              <p>Last modified: November 2022</p>
+              <p>Last modified: August 2023.</p>
             </Col>
 
             <Col
@@ -59,7 +63,7 @@ export const Footer = () => {
                 >
                   Space pictures by upklyak
                 </a>{" "}
-                at Freepik
+                at Freepik.
               </p>
             </Col>
           </Row>

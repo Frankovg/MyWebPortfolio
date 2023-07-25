@@ -1,7 +1,9 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Accordion from "react-bootstrap/Accordion";
 import { Fade } from "react-awesome-reveal";
+
+//Components
+import Accordion from "react-bootstrap/Accordion";
 import { Cv } from "./Cv";
 import { Education } from "./Education";
 import { Hobbies } from "./Hobbies";
