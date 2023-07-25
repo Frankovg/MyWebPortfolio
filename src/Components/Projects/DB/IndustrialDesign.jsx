@@ -1,9 +1,9 @@
-import bug from "../../../assets/projects/bug.png";
-import quiero from "../../../assets/projects/quiero.png";
-import micropack from "../../../assets/projects/micropack.png";
-import norush from "../../../assets/projects/norush.png";
-import cad from "../../../assets/projects/cad.png";
-import random from "../../../assets/projects/random.png";
+import bug from "../../../assets/projects/bug.webp";
+import quiero from "../../../assets/projects/quiero.webp";
+import micropack from "../../../assets/projects/micropack.webp";
+import norush from "../../../assets/projects/norush.webp";
+import cad from "../../../assets/projects/cad.webp";
+import random from "../../../assets/projects/random.webp";
 
 const industrialDesigns = [
   {

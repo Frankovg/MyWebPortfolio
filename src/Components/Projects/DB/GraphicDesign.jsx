@@ -1,8 +1,8 @@
-import pubExt from "../../../assets/projects/pub-ext.png";
-import manuals from "../../../assets/projects/manuals.png";
-import artNorush from "../../../assets/projects/art-norush.png";
-import logotype from "../../../assets/projects/logo-design.png";
-import uxui from "../../../assets/projects/uxui.png";
+import pubExt from "../../../assets/projects/pub-ext.webp";
+import manuals from "../../../assets/projects/manuals.webp";
+import artNorush from "../../../assets/projects/art-norush.webp";
+import logotype from "../../../assets/projects/logo-design.webp";
+import uxui from "../../../assets/projects/uxui.webp";
 
 const graphicDesigns = [
   {

@@ -1,13 +1,19 @@
 import React from "react";
-import { ProjectCard } from "./ProjectCard/ProjectCard";
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { Fade } from "react-awesome-reveal";
 import { Slide } from "react-awesome-reveal";
-import "./projects.scss";
 import TrackVisibility from "react-on-screen";
+
+//Components
+import { ProjectCard } from "./ProjectCard/ProjectCard";
+import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+
+//Projects
 import webProjects from "./DB/WebProjects";
 import graphicDesigns from "./DB/GraphicDesign";
 import industrialDesigns from "./DB/IndustrialDesign";
+
+//Styles
+import "./projects.scss";
 
 export const Projects = () => {
   return (

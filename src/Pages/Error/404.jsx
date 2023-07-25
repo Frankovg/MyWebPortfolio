@@ -1,8 +1,12 @@
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
 import TrackVisibility from "react-on-screen";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+
+//images
 import lost from "../../assets/ship/lost.svg";
+
+//Styles
 import "./errorPage.scss";
 
 export const ErrorPage = () => {

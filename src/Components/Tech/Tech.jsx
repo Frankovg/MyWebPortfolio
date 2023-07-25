@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import { Fade } from "react-awesome-reveal";
-import "./tech.scss";
+
+//Icons
 import reactIcon from "../../assets/icons/react.svg";
 import htmlIcon from "../../assets/icons/html.svg";
 import cssIcon from "../../assets/icons/css.svg";
@@ -22,95 +23,167 @@ import sassIcon from "../../assets/icons/sass.svg";
 import scrumIcon from "../../assets/icons/scrum.svg";
 import tsIcon from "../../assets/icons/ts.svg";
 
+//Styles
+import "./tech.scss";
+
+const frontend = [
+  {
+    id: 0,
+    name: "React",
+    description: "A JavaScript library for building user interfaces.",
+    position: "right",
+    class: "reactH",
+    icon: reactIcon,
+  },
+  {
+    id: 1,
+    name: "HTML",
+    description: "A standard markup language for web page creation.",
+    position: "bottom",
+    class: "htmlH",
+    icon: htmlIcon,
+  },
+  {
+    id: 2,
+    name: "CSS",
+    description: "Used to stylize elements written in HTML.",
+    position: "left",
+    class: "cssH",
+    icon: cssIcon,
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    description: "The programming language for the Web.",
+    position: "right",
+    class: "jsH",
+    icon: jsIcon,
+  },
+  {
+    id: 4,
+    name: "TypeScript",
+    description: "Syntactic superset of JavaScript which adds static typing.",
+    position: "bottom",
+    class: "tsH",
+    icon: tsIcon,
+  },
+  {
+    id: 5,
+    name: "Redux",
+    description: "A predictable state container for JavaScript apps.",
+    position: "left",
+    class: "reduxH",
+    icon: reduxIcon,
+  },
+  {
+    id: 6,
+    name: "Sass",
+    description: "An extension of CSS.",
+    position: "right",
+    class: "sassH",
+    icon: sassIcon,
+  },
+  {
+    id: 7,
+    name: "Bootstrap",
+    description: "The most popular CSS Framework.",
+    position: "bottom",
+    class: "bootH",
+    icon: bootstrapIcon,
+  },
+];
+
+const backend = [
+  {
+    id: 0,
+    name: "Node.js",
+    description: "An open source server environment.",
+    position: "right",
+    class: "nodeH",
+    icon: nodeIcon,
+  },
+  {
+    id: 1,
+    name: "Express.js",
+    description: "A minimal and flexible Node.js web application framework.",
+    position: "bottom",
+    class: "expH",
+    icon: expressIcon,
+  },
+  {
+    id: 2,
+    name: "MySQL",
+    description: "A relational database management system.",
+    position: "left",
+    class: "sqlH",
+    icon: mysqlIcon,
+  },
+];
+
+const uxui = [
+  {
+    id: 0,
+    name: "Adobe Photoshop",
+    description: "Image editing and photo retouching.",
+    position: "right",
+    class: "psH",
+    icon: psIcon,
+  },
+  {
+    id: 1,
+    name: "Adobe Illustrator",
+    description: "Creating drawings, illustrations and artwork.",
+    position: "bottom",
+    class: "aiH",
+    icon: aiIcon,
+  },
+  {
+    id: 2,
+    name: "Figma",
+    description: "A web-based graphics editing and user interface design app.",
+    position: "left",
+    class: "figH",
+    icon: figmaIcon,
+  },
+];
+
+const git = [
+  {
+    id: 0,
+    name: "Git",
+    description: "A version control system designed to handle everything.",
+    position: "right",
+    class: "gitH",
+    icon: gitIcon,
+  },
+  {
+    id: 1,
+    name: "Github",
+    description:
+      "A code hosting platform for collaboration and version control.",
+    position: "bottom",
+    class: "githubH",
+    icon: githubIcon,
+  },
+];
+
+const agile = [
+  {
+    id: 0,
+    name: "SCRUM",
+    description: "A process framework used to manage product development.",
+    position: "left",
+    class: "scrumH",
+    icon: scrumIcon,
+  },
+];
+
 export const Tech = () => {
-  const renderTooltipReact = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A JavaScript library for building user interfaces.
-    </Tooltip>
-  );
-  const renderTooltipHTML = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A standard markup language for web page creation.
-    </Tooltip>
-  );
-  const renderTooltipCSS = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Used to stylize elements written in HTML.
-    </Tooltip>
-  );
-  const renderTooltipJs = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      The programming language for the Web.
-    </Tooltip>
-  );
-  const renderTooltipTs = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Syntactic superset of JavaScript which adds static typing.
-    </Tooltip>
-  );
-  const renderTooltipBoot = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      The most popular CSS Framework.
-    </Tooltip>
-  );
-  const renderTooltipSass = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      An extension of CSS.
-    </Tooltip>
-  );
-  const renderTooltipRedux = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A predictable state container for JavaScript apps.
-    </Tooltip>
-  );
+  const renderTooltip = (techDescription) => {
+    return <Tooltip id="button-tooltip">{techDescription}</Tooltip>;
+  };
 
-  const renderTooltipNode = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      An open source server environment.
-    </Tooltip>
-  );
-  const renderTooltipEx = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A minimal and flexible Node.js web application framework.
-    </Tooltip>
-  );
-  const renderTooltipSQL = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A relational database management system.
-    </Tooltip>
-  );
-
-  const renderTooltipPs = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Image editing and photo retouching.
-    </Tooltip>
-  );
-  const renderTooltipAi = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Creating drawings, illustrations and artwork.
-    </Tooltip>
-  );
-  const renderTooltipFigma = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A web-based graphics editing and user interface design app.
-    </Tooltip>
-  );
-
-  const renderTooltipGit = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A version control system designed to handle everything.
-    </Tooltip>
-  );
-  const renderTooltipGithub = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A code hosting platform for collaboration and version control.
-    </Tooltip>
-  );
-  const renderTooltipScrum = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      A process framework used to manage product development.
-    </Tooltip>
-  );
+  const delayOption = { show: 100, hide: 100 };
 
   return (
     <section className="tech-stack" id="tech-stack">
@@ -134,90 +207,21 @@ export const Tech = () => {
                   <Col sm={12} className="text-center">
                     <h4>Front-end</h4>
                   </Col>
-                  <Col xs={4} sm={3}>
-                    <OverlayTrigger
-                      placement="right"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipReact}
-                    >
-                      <img
-                        src={reactIcon}
-                        alt="React logo"
-                        className="reactH"
-                      />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col xs={4} sm={3}>
-                    <OverlayTrigger
-                      placement="bottom"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipHTML}
-                    >
-                      <img src={htmlIcon} alt="HTML logo" className="htmlH" />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col xs={4} sm={3}>
-                    <OverlayTrigger
-                      placement="left"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipCSS}
-                    >
-                      <img src={cssIcon} alt="CSS logo" className="cssH" />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col xs={4} sm={3}>
-                    <OverlayTrigger
-                      placement="right"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipJs}
-                    >
-                      <img src={jsIcon} alt="JavaScript logo" className="jsH" />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col xs={4} sm={3}>
-                    <OverlayTrigger
-                      placement="bottom"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipTs}
-                    >
-                      <img src={tsIcon} alt="TypeScript logo" className="tsH" />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col xs={4} sm={3}>
-                    <OverlayTrigger
-                      placement="left"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipRedux}
-                    >
-                      <img
-                        src={reduxIcon}
-                        alt="Redux logo"
-                        className="reduxH"
-                      />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col xs={4} sm={3}>
-                    <OverlayTrigger
-                      placement="right"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipSass}
-                    >
-                      <img src={sassIcon} alt="Sass logo" className="sassH" />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col xs={4} sm={3}>
-                    <OverlayTrigger
-                      placement="bottom"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipBoot}
-                    >
-                      <img
-                        src={bootstrapIcon}
-                        alt="Bootstrap logo"
-                        className="bootH"
-                      />
-                    </OverlayTrigger>
-                  </Col>
+                  {frontend.map((fTech, idx) => (
+                    <Col xs={4} sm={3} key={idx}>
+                      <OverlayTrigger
+                        placement={fTech.position}
+                        delay={delayOption}
+                        overlay={renderTooltip(fTech.description)}
+                      >
+                        <img
+                          src={fTech.icon}
+                          alt={`${fTech.name} logo`}
+                          className={fTech.class}
+                        />
+                      </OverlayTrigger>
+                    </Col>
+                  ))}
                 </Row>
 
                 {/* LEFT BLOCK ** UP-LG */}
@@ -225,102 +229,75 @@ export const Tech = () => {
                   <Col sm={12} className="text-center">
                     <h4>Front-end</h4>
                   </Col>
-                  <Col lg={4}>
-                    <OverlayTrigger
-                      placement="right"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipReact}
-                    >
-                      <img
-                        src={reactIcon}
-                        alt="React logo"
-                        className="reactH"
-                      />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col lg={4}>
-                    <OverlayTrigger
-                      placement="right"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipHTML}
-                    >
-                      <img src={htmlIcon} alt="HTML logo" className="htmlH" />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col lg={4}>
-                    <OverlayTrigger
-                      placement="left"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipCSS}
-                    >
-                      <img src={cssIcon} alt="CSS logo" className="cssH" />
-                    </OverlayTrigger>
-                  </Col>
+                  {frontend.map((fTech, idx) => (
+                    <Fragment key={idx}>
+                      {idx < 3 && (
+                        <Col lg={4}>
+                          <OverlayTrigger
+                            placement={fTech.position}
+                            delay={delayOption}
+                            overlay={renderTooltip(fTech.description)}
+                          >
+                            <img
+                              src={fTech.icon}
+                              alt={`${fTech.name} logo`}
+                              className={fTech.class}
+                            />
+                          </OverlayTrigger>
+                        </Col>
+                      )}
+                    </Fragment>
+                  ))}
                 </Row>
 
                 <Row className="tech-group up-lg center">
                   <Col sm={12} className="text-center">
                     <h4>&nbsp;</h4>
                   </Col>
-                  <Col lg={4}>
-                    <OverlayTrigger
-                      placement="right"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipJs}
-                    >
-                      <img src={jsIcon} alt="JavaScript logo" className="jsH" />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col lg={4}>
-                    <OverlayTrigger
-                      placement="right"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipTs}
-                    >
-                      <img src={tsIcon} alt="TypeScript logo" className="tsH" />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col lg={4}>
-                    <OverlayTrigger
-                      placement="left"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipRedux}
-                    >
-                      <img
-                        src={reduxIcon}
-                        alt="Redux logo"
-                        className="reduxH"
-                      />
-                    </OverlayTrigger>
-                  </Col>
+                  {frontend.map((fTech, idx) => (
+                    <Fragment key={idx}>
+                      {idx >= 3 && idx < 6 && (
+                        <Col lg={4}>
+                          <OverlayTrigger
+                            placement={fTech.position}
+                            delay={delayOption}
+                            overlay={renderTooltip(fTech.description)}
+                          >
+                            <img
+                              src={fTech.icon}
+                              alt={`${fTech.name} logo`}
+                              className={fTech.class}
+                            />
+                          </OverlayTrigger>
+                        </Col>
+                      )}
+                    </Fragment>
+                  ))}
                 </Row>
 
                 <Row className="tech-group up-lg bottom">
                   <Col sm={12} className="text-center">
                     <h4>&nbsp;</h4>
                   </Col>
-                  <Col lg={4}>
-                    <OverlayTrigger
-                      placement="right"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipSass}
-                    >
-                      <img src={sassIcon} alt="Sass logo" className="sassH" />
-                    </OverlayTrigger>
-                  </Col>
-                  <Col lg={4}>
-                    <OverlayTrigger
-                      placement="right"
-                      delay={{ show: 100, hide: 100 }}
-                      overlay={renderTooltipBoot}
-                    >
-                      <img
-                        src={bootstrapIcon}
-                        alt="Bootstrap logo"
-                        className="bootH"
-                      />
-                    </OverlayTrigger>
-                  </Col>
+                  {frontend.map((fTech, idx) => (
+                    <Fragment key={idx}>
+                      {idx >= 6 && idx < 9 && (
+                        <Col lg={4}>
+                          <OverlayTrigger
+                            placement={fTech.position}
+                            delay={delayOption}
+                            overlay={renderTooltip(fTech.description)}
+                          >
+                            <img
+                              src={fTech.icon}
+                              alt={`${fTech.name} logo`}
+                              className={fTech.class}
+                            />
+                          </OverlayTrigger>
+                        </Col>
+                      )}
+                    </Fragment>
+                  ))}
                 </Row>
               </Col>
 
@@ -332,45 +309,21 @@ export const Tech = () => {
                       <Col sm={12} className="text-center">
                         <h4>Back-end</h4>
                       </Col>
-                      <Col xs={4} sm={4}>
-                        <OverlayTrigger
-                          placement="right"
-                          delay={{ show: 100, hide: 100 }}
-                          overlay={renderTooltipNode}
-                        >
-                          <img
-                            src={nodeIcon}
-                            alt="Node.js logo"
-                            className="nodeH"
-                          />
-                        </OverlayTrigger>
-                      </Col>
-                      <Col xs={4} sm={4}>
-                        <OverlayTrigger
-                          placement="bottom"
-                          delay={{ show: 100, hide: 100 }}
-                          overlay={renderTooltipEx}
-                        >
-                          <img
-                            src={expressIcon}
-                            alt="Express logo"
-                            className="expH"
-                          />
-                        </OverlayTrigger>
-                      </Col>
-                      <Col xs={4} sm={4}>
-                        <OverlayTrigger
-                          placement="left"
-                          delay={{ show: 100, hide: 100 }}
-                          overlay={renderTooltipSQL}
-                        >
-                          <img
-                            src={mysqlIcon}
-                            alt="MySQL logo"
-                            className="sqlH"
-                          />
-                        </OverlayTrigger>
-                      </Col>
+                      {backend.map((bTech, idx) => (
+                        <Col xs={4} sm={4} key={idx}>
+                          <OverlayTrigger
+                            placement={bTech.position}
+                            delay={delayOption}
+                            overlay={renderTooltip(bTech.description)}
+                          >
+                            <img
+                              src={bTech.icon}
+                              alt={`${bTech.name} logo`}
+                              className={bTech.class}
+                            />
+                          </OverlayTrigger>
+                        </Col>
+                      ))}
                     </Row>
                   </Col>
 
@@ -379,45 +332,21 @@ export const Tech = () => {
                       <Col sm={12} className="text-center">
                         <h4>UX/UI Design</h4>
                       </Col>
-                      <Col xs={4} sm={4}>
-                        <OverlayTrigger
-                          placement="right"
-                          delay={{ show: 100, hide: 100 }}
-                          overlay={renderTooltipPs}
-                        >
-                          <img
-                            src={psIcon}
-                            alt="Adobe Photoshop logo"
-                            className="psH"
-                          />
-                        </OverlayTrigger>
-                      </Col>
-                      <Col xs={4} sm={4}>
-                        <OverlayTrigger
-                          placement="bottom"
-                          delay={{ show: 100, hide: 100 }}
-                          overlay={renderTooltipAi}
-                        >
-                          <img
-                            src={aiIcon}
-                            alt="Adobe Illustrator logo"
-                            className="aiH"
-                          />
-                        </OverlayTrigger>
-                      </Col>
-                      <Col xs={4} sm={4}>
-                        <OverlayTrigger
-                          placement="left"
-                          delay={{ show: 100, hide: 100 }}
-                          overlay={renderTooltipFigma}
-                        >
-                          <img
-                            src={figmaIcon}
-                            alt="Figma logo"
-                            className="figH"
-                          />
-                        </OverlayTrigger>
-                      </Col>
+                      {uxui.map((uTech, idx) => (
+                        <Col xs={4} sm={4} key={idx}>
+                          <OverlayTrigger
+                            placement={uTech.position}
+                            delay={delayOption}
+                            overlay={renderTooltip(uTech.description)}
+                          >
+                            <img
+                              src={uTech.icon}
+                              alt={`${uTech.name} logo`}
+                              className={uTech.class}
+                            />
+                          </OverlayTrigger>
+                        </Col>
+                      ))}
                     </Row>
                   </Col>
 
@@ -428,32 +357,21 @@ export const Tech = () => {
                           <Col sm={12} className="text-center">
                             <h4>Version Control System</h4>
                           </Col>
-                          <Col xs={6} sm={6}>
-                            <OverlayTrigger
-                              placement="right"
-                              delay={{ show: 100, hide: 100 }}
-                              overlay={renderTooltipGit}
-                            >
-                              <img
-                                src={gitIcon}
-                                alt="Git logo"
-                                className="gitH"
-                              />
-                            </OverlayTrigger>
-                          </Col>
-                          <Col xs={6} sm={6}>
-                            <OverlayTrigger
-                              placement="bottom"
-                              delay={{ show: 100, hide: 100 }}
-                              overlay={renderTooltipGithub}
-                            >
-                              <img
-                                src={githubIcon}
-                                alt="Github logo"
-                                className="githubH"
-                              />
-                            </OverlayTrigger>
-                          </Col>
+                          {git.map((gTech, idx) => (
+                            <Col xs={6} sm={6} key={idx}>
+                              <OverlayTrigger
+                                placement={gTech.position}
+                                delay={delayOption}
+                                overlay={renderTooltip(gTech.description)}
+                              >
+                                <img
+                                  src={gTech.icon}
+                                  alt={`${gTech.name} logo`}
+                                  className={gTech.class}
+                                />
+                              </OverlayTrigger>
+                            </Col>
+                          ))}
                         </Row>
                       </Col>
 
@@ -462,19 +380,21 @@ export const Tech = () => {
                           <Col sm={12} className="text-center agile-title">
                             <h4>Agile Method</h4>
                           </Col>
-                          <Col>
-                            <OverlayTrigger
-                              placement="left"
-                              delay={{ show: 100, hide: 100 }}
-                              overlay={renderTooltipScrum}
-                            >
-                              <img
-                                src={scrumIcon}
-                                alt="SCRUM icon"
-                                className="scrumH"
-                              />
-                            </OverlayTrigger>
-                          </Col>
+                          {agile.map((aTech, idx) => (
+                            <Col key={idx}>
+                              <OverlayTrigger
+                                placement={aTech.position}
+                                delay={delayOption}
+                                overlay={renderTooltip(aTech.description)}
+                              >
+                                <img
+                                  src={aTech.icon}
+                                  alt={`${aTech.name} logo`}
+                                  className={aTech.class}
+                                />
+                              </OverlayTrigger>
+                            </Col>
+                          ))}
                         </Row>
                       </Col>
                     </Row>

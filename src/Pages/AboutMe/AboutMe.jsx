@@ -1,4 +1,6 @@
 import React from "react";
+
+//Components
 import { Contact } from "../../Components/Contact/Contact";
 import { MySelf } from "../../Components/Header/MySelf";
 import { MyInfo } from "../../Components/MyInfo/MyInfo";

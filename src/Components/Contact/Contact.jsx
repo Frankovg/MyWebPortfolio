@@ -3,11 +3,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import TrackVisibility from "react-on-screen";
 import { Fade } from "react-awesome-reveal";
 import { Zoom } from "react-awesome-reveal";
-import planet from "../../assets/ship/planet.svg";
 import SendCustomEmail from "../../SendCustomEmail";
 import validator from "validator";
-import "./contact.scss";
+
+//Components
+import planet from "../../assets/ship/planet.svg";
 import { Success } from "../Modals/Success";
+
+//Styles
+import "./contact.scss";
 
 const formInitialDetails = {
   fullName: "",

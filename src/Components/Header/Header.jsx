@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import TrackVisibility from "react-on-screen";
-import ship from "../../assets/ship/ship.svg";
-import arrowDown from "../../assets/icons/arrow_down.svg";
 import { Zoom } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
+
+//Components
+import ship from "../../assets/ship/ship.svg";
+import arrowDown from "../../assets/icons/arrow_down.svg";
+
+//Components
 import "./header.scss";
 
 export const Header = () => {
@@ -13,7 +17,7 @@ export const Header = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
+
   const toRotate = [
     "Front-end Developer",
     "UX/UI Designer",
@@ -21,6 +25,7 @@ export const Header = () => {
     "Industrial Designer",
     "Web Developer",
   ];
+
   const period = 1500;
 
   useEffect(() => {
@@ -48,15 +53,11 @@ export const Header = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
       setDelta(100);
-    } else {
-      setIndex((prevIndex) => prevIndex + 1);
     }
   };
 
@@ -83,8 +84,9 @@ export const Header = () => {
                     My current focus is on developing web apps especially on the
                     Front-end. My background is an Industrial Designer and I
                     have a solid expertise working for big companies around the
-                    world. <br /> I hope you enjoy this trip I have made for you
-                    and feel free to contact me.
+                    world.
+                    <br />I hope you enjoy this trip I have made for you and
+                    feel free to contact me.
                   </p>
                   <a className="toConnect" href="#connect">
                     Let's connect <ArrowRightCircle size={25} />

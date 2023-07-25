@@ -1,9 +1,9 @@
-import coolxMain from "../../../assets/projects/coolx-main.png";
-import digiartMain from "../../../assets/projects/digiart-main.png";
-import netfilmMovies from "../../../assets/projects/netfilm-movies.png";
-import calc from "../../../assets/projects/calc.png";
-import videoplayer from "../../../assets/projects/videoplayer.png";
-import portfolio from "../../../assets/projects/portfolio.png";
+import coolxMain from "../../../assets/projects/coolx-main.webp";
+import digiartMain from "../../../assets/projects/digiart-main.webp";
+import netfilmMovies from "../../../assets/projects/netfilm-movies.webp";
+import calc from "../../../assets/projects/calc.webp";
+import videoplayer from "../../../assets/projects/videoplayer.webp";
+import portfolio from "../../../assets/projects/portfolio.webp";
 
 const webProjects = [
   {

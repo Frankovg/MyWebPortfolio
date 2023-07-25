@@ -1,5 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+
+//Icons
 import alex from "../../assets/jobs/alex.svg";
 import fix from "../../assets/jobs/fix.svg";
 import grupoquiero from "../../assets/jobs/grupoquiero.svg";
@@ -8,30 +10,51 @@ import norush from "../../assets/jobs/norush.svg";
 import pubext from "../../assets/jobs/pubext.svg";
 import micropack from "../../assets/jobs/micropack.svg";
 
+const companies = [
+  {
+    icon: fix,
+    alt: "Estudio Fix",
+  },
+  {
+    icon: micropack,
+    alt: "Micropack",
+  },
+  {
+    icon: grupoquiero,
+    alt: "Grupo Quiero",
+  },
+  {
+    icon: norush,
+    alt: "noRush",
+  },
+  {
+    icon: pubext,
+    alt: "Pubext 2000",
+  },
+  {
+    icon: ikea,
+    alt: "Ikea",
+  },
+  {
+    icon: alex,
+    alt: "Rótulos Alex",
+  },
+  //   {
+  //     icon: ,
+  //     alt: "",
+  //   },
+];
+
 export const Jobs = () => {
   return (
     <Row className="jobs">
-      <Col>
-        <img src={fix} alt="Estudio Fix" />
-      </Col>
-      <Col>
-        <img src={micropack} alt="Micropack" />
-      </Col>
-      <Col>
-        <img src={grupoquiero} alt="Grupo Quiero" />
-      </Col>
-      <Col>
-        <img src={norush} alt="noRush" />
-      </Col>
-      <Col>
-        <img src={pubext} alt="Pubext 2000" />
-      </Col>
-      <Col>
-        <img src={ikea} alt="Ikea" />
-      </Col>
-      <Col>
-        <img src={alex} alt="Rótulos Alex" />
-      </Col>
+      {companies.map((company, idx) => {
+        return (
+          <Col key={idx}>
+            <img src={company.icon} alt={company.alt} />
+          </Col>
+        );
+      })}
     </Row>
   );
 };

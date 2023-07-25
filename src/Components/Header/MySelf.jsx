@@ -1,10 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import TrackVisibility from "react-on-screen";
-import mySelf from "../../assets/ship/yo.svg";
-import arrowDown from "../../assets/icons/arrow_down.svg";
 import { Zoom } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
+
+//Components
+import mySelf from "../../assets/ship/yo.svg";
+import arrowDown from "../../assets/icons/arrow_down.svg";
+
+//Styles
 import "./header.scss";
 
 export const MySelf = () => {

@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import "./projectCard.scss";
-import { Button, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+
+//Components
 import { ProjectModal } from "../../Modals/ProjectModal/ProjectModal";
+
+//Styles
+import "./projectCard.scss";
 
 export const ProjectCard = ({ project }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -11,14 +15,15 @@ export const ProjectCard = ({ project }) => {
   return (
     <>
       <Col xs={12} sm={12} lg={6} xl={4}>
-        <div className={`proj-imgbx ${type}`}>
+        <div
+          className={`proj-imgbx ${type}`}
+          onClick={() => setOpenModal(true)}
+        >
           <img src={imgUrl} alt="Project poster" />
           <div className="proj-txtx d-flex flex-column align-items-center">
             <h4>{title}</h4>
             <span>{description}</span>
-            <Button type="button" onClick={() => setOpenModal(true)}>
-              +
-            </Button>
+            <p type="button">+</p>
           </div>
         </div>
       </Col>
