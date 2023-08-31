@@ -26,8 +26,8 @@ export const Projects = () => {
                 <div>
                   <h2>Projects</h2>
                   <p>
-                    A short exploration of my present as a Web Developer and my
-                    past as a Designer.
+                    A short exploration of my present as a Front-end Developer
+                    and my past as a Designer.
                   </p>
                 </div>
               </Fade>
@@ -42,7 +42,7 @@ export const Projects = () => {
                 >
                   {/* MOBILE */}
                   <Nav.Item className="yesMobile">
-                    <Nav.Link eventKey="first">Web</Nav.Link>
+                    <Nav.Link eventKey="first">Web Apps</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="yesMobile">
                     <Nav.Link eventKey="second">Graphic</Nav.Link>
@@ -53,7 +53,7 @@ export const Projects = () => {
 
                   {/* DESKTOP */}
                   <Nav.Item className="noMobile">
-                    <Nav.Link eventKey="first">Web Development</Nav.Link>
+                    <Nav.Link eventKey="first">Web Apps Development</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="noMobile">
                     <Nav.Link eventKey="second">Graphic Design</Nav.Link>
