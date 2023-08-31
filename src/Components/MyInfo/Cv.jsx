@@ -3,10 +3,6 @@ import React from "react";
 //Components
 import ListGroup from "react-bootstrap/ListGroup";
 
-//Files
-import cv from "../../assets/cv/Franco_Amoroso_cv_2022_en.pdf";
-import portfolio from "../../assets/portfolio/amoroso_franco_portfolio22_desktop.pdf";
-
 export const Cv = () => {
   const downloadLinks = [
     {
@@ -29,22 +25,22 @@ export const Cv = () => {
     },
   ];
 
-  const downloadFiles = [
-    {
-      id: "0",
-      href: cv,
-      seen: false,
-      name: "franco_amoroso_cv_2022_en",
-      title: "Curriculum Vitae - ENGLISH",
-    },
-    {
-      id: "1",
-      href: portfolio,
-      seen: false,
-      name: "franco_amoroso_portfolio_2022_en",
-      title: "Portfolio - ENGLISH",
-    },
-  ];
+  // const downloadFiles = [
+  //   {
+  //     id: "0",
+  //     href: cv,
+  //     seen: false,
+  //     name: "franco_amoroso_cv_2022_en",
+  //     title: "Curriculum Vitae - ENGLISH",
+  //   },
+  //   {
+  //     id: "1",
+  //     href: portfolio,
+  //     seen: false,
+  //     name: "franco_amoroso_portfolio_2022_en",
+  //     title: "Portfolio - ENGLISH",
+  //   },
+  // ];
 
   return (
     <ListGroup as="ol">
@@ -73,7 +69,7 @@ export const Cv = () => {
         as="li"
         className="d-flex justify-content-between align-items-start"
       >
-        <div className="ms-2 me-auto d-flex flex-column">
+        {/* <div className="ms-2 me-auto d-flex flex-column">
           <div className="fw-bold mb-2">Download</div>
           {downloadFiles.map((file, idx) => {
             return (
@@ -89,7 +85,7 @@ export const Cv = () => {
               </a>
             );
           })}
-        </div>
+        </div> */}
       </ListGroup.Item>
     </ListGroup>
   );

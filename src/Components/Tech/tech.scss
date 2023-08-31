@@ -85,17 +85,6 @@
     img:hover {
       transform: scale(1.05);
     }
-    .gitH,
-    .githubH {
-      @include max-extralarge {
-        width: 45%;
-      }
-    }
-    .scrumH {
-      @include max-extralarge {
-        width: 20%;
-      }
-    }
     .nodeH,
     .expH,
     .sqlH,
@@ -126,9 +115,16 @@
       filter: brightness(0) saturate(100%) invert(30%) sepia(100%)
         saturate(1005%) hue-rotate(177deg) brightness(100%) contrast(106%);
     }
-    .reduxH:hover {
-      filter: brightness(0) saturate(100%) invert(29%) sepia(12%)
-        saturate(6975%) hue-rotate(238deg) brightness(102%) contrast(87%);
+    .turborepoH:hover {
+      filter: brightness(0) saturate(100%) invert(44%) sepia(96%)
+        saturate(2836%) hue-rotate(195deg) brightness(104%) contrast(101%);
+    }
+    .nextjsH:hover {
+      filter: $cyanLogoFilter;
+    }
+    .tailwindH:hover {
+      filter: brightness(0) saturate(100%) invert(70%) sepia(24%)
+        saturate(4619%) hue-rotate(168deg) brightness(101%) contrast(95%);
     }
     .sassH:hover {
       filter: brightness(0) saturate(100%) invert(66%) sepia(53%)
@@ -146,8 +142,7 @@
       filter: $cyanLogoFilter;
     }
     .sqlH:hover {
-      filter: brightness(0) saturate(100%) invert(55%) sepia(79%) saturate(550%)
-        hue-rotate(354deg) brightness(99%) contrast(92%);
+      filter: $cyanLogoFilter;
     }
     .psH:hover {
       filter: brightness(0) saturate(100%) invert(54%) sepia(27%)
@@ -166,6 +161,9 @@
         saturate(4133%) hue-rotate(342deg) brightness(90%) contrast(101%);
     }
     .githubH:hover {
+      filter: $cyanLogoFilter;
+    }
+    .gitlabH:hover {
       filter: $cyanLogoFilter;
     }
     .scrumH:hover {

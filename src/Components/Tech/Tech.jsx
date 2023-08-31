@@ -10,17 +10,18 @@ import htmlIcon from "../../assets/icons/html.svg";
 import cssIcon from "../../assets/icons/css.svg";
 import nodeIcon from "../../assets/icons/node.svg";
 import expressIcon from "../../assets/icons/express.svg";
-import mysqlIcon from "../../assets/icons/mysql.svg";
+import sqlIcon from "../../assets/icons/sql.svg";
 import aiIcon from "../../assets/icons/ai.svg";
-import bootstrapIcon from "../../assets/icons/bootstrap.svg";
+import tailwindIcon from "../../assets/icons/tailwind.svg";
 import figmaIcon from "../../assets/icons/figma.svg";
 import gitIcon from "../../assets/icons/git.svg";
 import githubIcon from "../../assets/icons/github_big.svg";
 import jsIcon from "../../assets/icons/js.svg";
 import psIcon from "../../assets/icons/ps.svg";
-import reduxIcon from "../../assets/icons/redux.svg";
+import nextjsIcon from "../../assets/icons/nextjs.svg";
+import turborepoIcon from "../../assets/icons/turborepo.svg";
 import sassIcon from "../../assets/icons/sass.svg";
-import scrumIcon from "../../assets/icons/scrum.svg";
+import gitlabIcon from "../../assets/icons/gitlab.svg";
 import tsIcon from "../../assets/icons/ts.svg";
 
 //Styles
@@ -37,19 +38,20 @@ const frontend = [
   },
   {
     id: 1,
-    name: "HTML",
-    description: "A standard markup language for web page creation.",
+    name: "Next.js",
+    description:
+      "It is a React framework that gives you building blocks to create web applications.",
     position: "bottom",
-    class: "htmlH",
-    icon: htmlIcon,
+    class: "nextjsH",
+    icon: nextjsIcon,
   },
   {
     id: 2,
-    name: "CSS",
-    description: "Used to stylize elements written in HTML.",
+    name: "HTML",
+    description: "A standard markup language for web page creation.",
     position: "left",
-    class: "cssH",
-    icon: cssIcon,
+    class: "htmlH",
+    icon: htmlIcon,
   },
   {
     id: 3,
@@ -69,11 +71,12 @@ const frontend = [
   },
   {
     id: 5,
-    name: "Redux",
-    description: "A predictable state container for JavaScript apps.",
+    name: "Turborepo",
+    description:
+      "It is a high-performance build system for Typescript and Javascript projects.",
     position: "left",
-    class: "reduxH",
-    icon: reduxIcon,
+    class: "turborepoH",
+    icon: turborepoIcon,
   },
   {
     id: 6,
@@ -85,11 +88,20 @@ const frontend = [
   },
   {
     id: 7,
-    name: "Bootstrap",
-    description: "The most popular CSS Framework.",
+    name: "Tailwind",
+    description:
+      "It is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
     position: "bottom",
-    class: "bootH",
-    icon: bootstrapIcon,
+    class: "tailwindH",
+    icon: tailwindIcon,
+  },
+  {
+    id: 8,
+    name: "CSS",
+    description: "Used to stylize elements written in HTML.",
+    position: "left",
+    class: "cssH",
+    icon: cssIcon,
   },
 ];
 
@@ -112,11 +124,12 @@ const backend = [
   },
   {
     id: 2,
-    name: "MySQL",
-    description: "A relational database management system.",
+    name: "SQL",
+    description:
+      "It is a standard language for database creation and manipulation.",
     position: "left",
     class: "sqlH",
-    icon: mysqlIcon,
+    icon: sqlIcon,
   },
 ];
 
@@ -165,16 +178,14 @@ const git = [
     class: "githubH",
     icon: githubIcon,
   },
-];
-
-const agile = [
   {
-    id: 0,
-    name: "SCRUM",
-    description: "A process framework used to manage product development.",
-    position: "left",
-    class: "scrumH",
-    icon: scrumIcon,
+    id: 1,
+    name: "Gitlab",
+    description:
+      "A code hosting platform for collaboration and version control.",
+    position: "bottom",
+    class: "gitlabH",
+    icon: gitlabIcon,
   },
 ];
 
@@ -208,19 +219,21 @@ export const Tech = () => {
                     <h4>Front-end</h4>
                   </Col>
                   {frontend.map((fTech, idx) => (
-                    <Col xs={4} sm={3} key={idx}>
-                      <OverlayTrigger
-                        placement={fTech.position}
-                        delay={delayOption}
-                        overlay={renderTooltip(fTech.description)}
-                      >
-                        <img
-                          src={fTech.icon}
-                          alt={`${fTech.name} logo`}
-                          className={fTech.class}
-                        />
-                      </OverlayTrigger>
-                    </Col>
+                    <Fragment key={idx}>
+                      <Col xs={4} sm={idx < 3 ? 4 : 2}>
+                        <OverlayTrigger
+                          placement={fTech.position}
+                          delay={delayOption}
+                          overlay={renderTooltip(fTech.description)}
+                        >
+                          <img
+                            src={fTech.icon}
+                            alt={`${fTech.name} logo`}
+                            className={fTech.class}
+                          />
+                        </OverlayTrigger>
+                      </Col>
+                    </Fragment>
                   ))}
                 </Row>
 
@@ -304,7 +317,7 @@ export const Tech = () => {
               {/* RIGHT BLOCK ***************************** */}
               <Col xs={12} xl={6}>
                 <Row>
-                  <Col xs={12} sm={6} xl={12}>
+                  <Col>
                     <Row className="tech-group">
                       <Col sm={12} className="text-center">
                         <h4>Back-end</h4>
@@ -326,8 +339,9 @@ export const Tech = () => {
                       ))}
                     </Row>
                   </Col>
-
-                  <Col xs={12} sm={6} xl={12}>
+                </Row>
+                <Row>
+                  <Col>
                     <Row className="tech-group">
                       <Col sm={12} className="text-center">
                         <h4>UX/UI Design</h4>
@@ -349,54 +363,29 @@ export const Tech = () => {
                       ))}
                     </Row>
                   </Col>
+                </Row>
 
-                  <Col xs={12} sm={12}>
-                    <Row>
-                      <Col xs={8} sm={6} xl={8}>
-                        <Row className="tech-group  h-100">
-                          <Col sm={12} className="text-center">
-                            <h4>Version Control System</h4>
-                          </Col>
-                          {git.map((gTech, idx) => (
-                            <Col xs={6} sm={6} key={idx}>
-                              <OverlayTrigger
-                                placement={gTech.position}
-                                delay={delayOption}
-                                overlay={renderTooltip(gTech.description)}
-                              >
-                                <img
-                                  src={gTech.icon}
-                                  alt={`${gTech.name} logo`}
-                                  className={gTech.class}
-                                />
-                              </OverlayTrigger>
-                            </Col>
-                          ))}
-                        </Row>
+                <Row>
+                  <Col>
+                    <Row className="tech-group">
+                      <Col sm={12} className="text-center">
+                        <h4>Version Control System and Git repository</h4>
                       </Col>
-
-                      <Col xs={4} sm={6} xl={4}>
-                        <Row className="tech-group h-100">
-                          <Col sm={12} className="text-center agile-title">
-                            <h4>Agile Method</h4>
-                          </Col>
-                          {agile.map((aTech, idx) => (
-                            <Col key={idx}>
-                              <OverlayTrigger
-                                placement={aTech.position}
-                                delay={delayOption}
-                                overlay={renderTooltip(aTech.description)}
-                              >
-                                <img
-                                  src={aTech.icon}
-                                  alt={`${aTech.name} logo`}
-                                  className={aTech.class}
-                                />
-                              </OverlayTrigger>
-                            </Col>
-                          ))}
-                        </Row>
-                      </Col>
+                      {git.map((gTech, idx) => (
+                        <Col xs={4} sm={4} key={idx}>
+                          <OverlayTrigger
+                            placement={gTech.position}
+                            delay={delayOption}
+                            overlay={renderTooltip(gTech.description)}
+                          >
+                            <img
+                              src={gTech.icon}
+                              alt={`${gTech.name} logo`}
+                              className={gTech.class}
+                            />
+                          </OverlayTrigger>
+                        </Col>
+                      ))}
                     </Row>
                   </Col>
                 </Row>

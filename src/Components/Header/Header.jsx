@@ -81,12 +81,13 @@ export const Header = () => {
                     </span>
                   </h1>
                   <p>
-                    My current focus is on developing web apps especially on the
-                    Front-end. My background is an Industrial Designer and I
-                    have a solid expertise working for big companies around the
-                    world.
-                    <br />I hope you enjoy this trip I have made for you and
-                    feel free to contact me.
+                    As a dedicated Front-End Developer, I'm immersed in the
+                    world of web app development. With a background in
+                    Industrial Design, I bring a unique perspective to my work,
+                    honed through collaborations with major global corporations.
+                    <br />
+                    This space is all about my journey. Enjoy your time here,
+                    and hit me up if you've got questions or want to team up.
                   </p>
                   <a className="toConnect" href="#connect">
                     Let's connect <ArrowRightCircle size={25} />
