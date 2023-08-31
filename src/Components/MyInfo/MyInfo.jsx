@@ -20,11 +20,12 @@ export const MyInfo = () => {
         <Fade>
           <Row>
             <Col className="text-center">
-              <h2>FAQ</h2>
+              <h2>FAQ's</h2>
               <p>
-                I've prepared a few answers so you can know me a bit better. If
-                you would like to contact me, please find the contact form below
-                and send me a message.
+                I've taken the initiative to provide you with a few insights
+                that could give you a better understanding of who I am. If
+                you're interested in reaching out, feel free to use the contact
+                form located below to send me a message.
               </p>
             </Col>
           </Row>
@@ -32,14 +33,18 @@ export const MyInfo = () => {
             <Col>
               <Accordion flush>
                 <Accordion.Item eventKey="0">
-                  <Accordion.Header>Companies I've worked for</Accordion.Header>
+                  <Accordion.Header>
+                    Companies I've collaborated with
+                  </Accordion.Header>
                   <Accordion.Body>
                     <Jobs />
                   </Accordion.Body>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="1">
-                  <Accordion.Header>Clients I've worked with</Accordion.Header>
+                  <Accordion.Header>
+                    Clients I've collaborated with
+                  </Accordion.Header>
                   <Accordion.Body>
                     <Clients />
                   </Accordion.Body>
@@ -47,7 +52,7 @@ export const MyInfo = () => {
 
                 <Accordion.Item eventKey="2">
                   <Accordion.Header>
-                    About my degree and education
+                    About my degrees and education
                   </Accordion.Header>
                   <Accordion.Body>
                     <Education />
@@ -56,7 +61,7 @@ export const MyInfo = () => {
 
                 <Accordion.Item eventKey="3">
                   <Accordion.Header>
-                    Why did I move to software development?
+                    Why did I make the move to software development?
                   </Accordion.Header>
                   <Accordion.Body>
                     <Why />

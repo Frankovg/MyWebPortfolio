@@ -9,6 +9,7 @@ import ikea from "../../assets/jobs/ikea.svg";
 import norush from "../../assets/jobs/norush.svg";
 import pubext from "../../assets/jobs/pubext.svg";
 import micropack from "../../assets/jobs/micropack.svg";
+import asafedigital from "../../assets/jobs/asafedigital.svg";
 
 const companies = [
   {
@@ -39,10 +40,10 @@ const companies = [
     icon: alex,
     alt: "Rótulos Alex",
   },
-  //   {
-  //     icon: ,
-  //     alt: "",
-  //   },
+  {
+    icon: asafedigital,
+    alt: "A-SAFE Digital",
+  },
 ];
 
 export const Jobs = () => {
