@@ -29,6 +29,7 @@ export const ProjectModal = ({ project, show, onHide }) => {
 
   return (
     <Modal
+      size="lg"
       show={show}
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -97,14 +98,14 @@ export const ProjectModal = ({ project, show, onHide }) => {
               <p className="info-text">{info}</p>
             </Col>
             {company && company !== "" ? (
-              <Col sm={6} className="text-center">
+              <Col sm={6} className="text-left">
                 <p>Company: {company}</p>
               </Col>
             ) : (
               <></>
             )}
             {client && client !== "" ? (
-              <Col sm={6} className="text-center">
+              <Col sm={6} className="text-left">
                 <p>Client: {client}</p>
               </Col>
             ) : (
