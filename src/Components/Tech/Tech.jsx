@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
@@ -23,6 +23,12 @@ import turborepoIcon from "../../assets/icons/turborepo.svg";
 import sassIcon from "../../assets/icons/sass.svg";
 import gitlabIcon from "../../assets/icons/gitlab.svg";
 import tsIcon from "../../assets/icons/ts.svg";
+
+//Context
+import { LinkContext } from "../../Context/LinkContext";
+
+//hooks
+import useIntersectionObserver from "../../Hooks/useIntersectionObserver";
 
 //Styles
 import "./tech.scss";
@@ -190,6 +196,16 @@ const git = [
 ];
 
 export const Tech = () => {
+  const { setActiveLink } = useContext(LinkContext);
+  const techRef = useRef(null);
+  const entry = useIntersectionObserver(techRef, {});
+  const isVisible = !!entry?.isIntersecting;
+
+  useEffect(() => {
+    if (isVisible) setActiveLink("skills");
+    else setActiveLink("");
+  }, [isVisible]);
+
   const renderTooltip = (techDescription) => {
     return <Tooltip id="button-tooltip">{techDescription}</Tooltip>;
   };
@@ -197,7 +213,7 @@ export const Tech = () => {
   const delayOption = { show: 100, hide: 100 };
 
   return (
-    <section className="tech-stack" id="tech-stack">
+    <section className="tech-stack" id="tech-stack" ref={techRef}>
       <Container>
         <div className="tech-bx">
           <Fade>

@@ -77,7 +77,7 @@ export const ProjectModal = ({ project, show, onHide }) => {
 
           <Row>
             <Col>
-              <Carousel fade>
+              <Carousel fade controls={pictures.length === 1 ? false : true}>
                 {pictures?.map((img, index) => {
                   return (
                     <Carousel.Item key={index}>

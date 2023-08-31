@@ -9,6 +9,9 @@ import { ErrorPage } from "./Pages/Error/404";
 import { Footer } from "./Components/Footer/Footer";
 import { AboutMe } from "./Pages/AboutMe/AboutMe";
 
+//Context
+import { LinkProvider } from "./Context/LinkContext";
+
 //Styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.scss";
@@ -26,16 +29,18 @@ function App() {
         <meta name="author" content="Franco Gabriel Amoroso" />
         <link rel="canonical" href="https://www.franamoroso.com/" />
       </Helmet>
-      <NavBar />
+      <LinkProvider>
+        <NavBar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutme" element={<AboutMe />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
 
-      <Footer />
-      <Particles id="tsparticles" />
+        <Footer />
+        <Particles id="tsparticles" />
+      </LinkProvider>
     </BrowserRouter>
   );
 }
