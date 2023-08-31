@@ -7,8 +7,8 @@ const education = [
     academy: "Socratech",
     when: "2022, Malaga, Spain",
     paragraphs: [
-      "An intense 16 weeks (630 hours) bootcamp where I gained a solid base of programming with JavaScript and how to develop Web Applications.",
-      "Training with the most demanded technologies of the market like React.js, Node.js, HTML, CSS, MySQL among others. Also, it put me in a real tech environment developing a project for a real company.",
+      "An immersive 16-week (630-hour) bootcamp during which I acquired a robust foundation in JavaScript programming and honed my skills in web application development.",
+      "Receiving training in the industry's most demanded technologies, including React.js, Node.js, HTML, CSS, MySQL, and more, the program also immersed me in an authentic tech ecosystem. This hands-on experience involved developing a project for an actual company, providing invaluable exposure to a real-world tech environment.",
     ],
   },
   {
@@ -26,7 +26,7 @@ const education = [
     when: "2022, Malaga, Spain",
     paragraphs: [
       "“Focus on the user and all else will follow.” It is a 200 hours course, plus a lot of reading and video support material.",
-      "I learned how to complete the design process from beginning to end, including: Empathizing with users; Defining user pain points; Creating wireframes, mockups, and prototypes; and Testing designs through usability studies and Iterating.",
+      "I acquired comprehensive knowledge of the entire design process, covering every stage from inception to completion. This encompassed user empathy, identification of user pain points, crafting wireframes, mockups, and prototypes, rigorous testing through usability studies, and iterative refinement.",
     ],
   },
   {
@@ -34,8 +34,8 @@ const education = [
     academy: "Mar del Plata University",
     when: "2014, Mar del Plata, Argentina",
     paragraphs: [
-      "A six years long and very complex career where I learned about technologies, art, engineering and industry.",
-      "The industrial design engineer, during the design process, makes use of the necessary techniques in ideation, invention, visualization, calculation, management, design and specification of industrial details that determine the form of an engineering product. At the same time, it combines market analysis with the innovative vision of the proposal made.",
+      "A six-year-long and multifaceted journey that led me through the intricate interplay of technology, art, engineering, and industry.",
+      "Throughout the design process, the industrial design engineer adeptly employs a wide array of techniques encompassing ideation, invention, visualization, calculation, management, and the meticulous specification of industrial intricacies that ultimately shape the form of an engineering product. Concurrently, this discipline seamlessly marries market analysis with an innovative outlook, thereby infusing the proposal with a visionary perspective.",
     ],
   },
 ];

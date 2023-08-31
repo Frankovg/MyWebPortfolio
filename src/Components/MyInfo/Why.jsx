@@ -3,20 +3,24 @@ import React from "react";
 export const Why = () => {
   return (
     <>
-      As I said before, computers have always been my hobby. But, for many
-      years, I've never thought about it as a profession. <br />
-      <br /> I am a very curious person, especially about how things work or how
-      products and services are made. And this curiosity has put me to study
-      Industrial Design, and it was perfect because I was finally able to find
-      many of the answers to all my curiosity's questions. <br />
-      <br /> After years, I'm still feeling curious, but something was changing
-      in my thoughts. The evolution of technology and how it impacts our society
-      in a very short period of time in a world where we are all connected, has
-      pushed my interest in digital products and services. <br />
-      <br /> Now, I'm very happy to be a developer. I'm still learning every
-      day, of course. But it keeps me motivated, because there is always
-      something to do, and I'm excited to know more about our future techs. And
-      as always, it gives me my favorite fuel... curiosity.
+      As I mentioned earlier, computers have always been my passion. However,
+      for many years, I never considered it as a potential profession.
+      <br />
+      <br /> I possess an innate curiosity, particularly in understanding the
+      mechanics behind things, as well as the creation of products and services.
+      This very curiosity steered me towards the study of Industrial Design, a
+      field that provided me with a plethora of answers to my inquisitive
+      inquiries.
+      <br />
+      <br /> Over time, my curiosity remained strong, but a transformation was
+      occurring in my perspective. The rapid evolution of technology and its
+      profound impact on society, within a world that's profoundly
+      interconnected, intensified my interest in digital products and services.
+      <br />
+      <br /> Today, I'm thrilled to be a developer. Naturally, I'm continuously
+      learning, and that's what keeps me motivated. The ever-present prospect of
+      tasks to tackle and my eagerness to explore upcoming technologies fuels my
+      enthusiasm. And, as always, it gives me my favorite fuel... curiosity.
     </>
   );
 };

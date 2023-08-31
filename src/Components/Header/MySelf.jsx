@@ -23,15 +23,16 @@ export const MySelf = () => {
                   <span className="tagline">Hello everyone! I'm</span>
                   <h1>Franco Gabriel Amoroso</h1>
                   <p>
-                    My relationship with technology started when I was a child
-                    and it has been my passion since then. That's because my
-                    father used to have a computer store in the 90's, so I grew
-                    up surrounded by old computers. In those years that was
-                    really cool! Plus, it was the new era of the internet.{" "}
-                    <br /> The universe of software and hardware have always
-                    felt natural to me and, of course, it is my favorite hobby
-                    and tool. That's why I have always dedicated my professional
-                    life around technology.
+                    My journey with technology began in my childhood and has
+                    remained my passion ever since. This connection sprouted
+                    from my father's ownership of a computer store in the 90s,
+                    enveloping me in an environment filled with vintage
+                    computers. Those days held a unique charm, especially with
+                    the emergence of the internet.
+                    <br />
+                    The realm of software and hardware has consistently felt
+                    like a second nature to me, becoming not only my favorite
+                    hobby but also my most cherished tool.
                   </p>
                 </div>
               </Fade>

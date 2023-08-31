@@ -14,36 +14,36 @@ const hobbies = [
     icon: videogame,
     alt: "Videogames",
     description:
-      "I'm a PC gamer and I reckon I will be forever!. I play online games with friends but I also enjoy open world games with amazing stories. My favorite genres are competitive shooters, rol, adventures and simulators.",
+      "I'm a die-hard PC gamer, and I don't see that changing anytime soon! Whether I'm teaming up with friends in online games or getting lost in open-world adventures with epic stories, gaming is my jam. I'm all about competitive shooters, RPGs, exciting adventures, and immersive simulators – they're my go-to genres!",
   },
   {
     icon: sport,
     alt: "Extreme sports",
     description:
-      "My favourite sports are skateboarding and mountain biking. But I love in general every kind of extreme sport. I like adrenaline and speed, but also I like the culture behind of these sports.",
+      "I'm all about skateboarding and mountain biking – they're my top picks when it comes to sports. But honestly, I'm a fan of pretty much any extreme sport out there. The mix of adrenaline, speed, and the whole culture around these sports just gets me hooked!",
   },
   {
     icon: outdoor,
     alt: "Outdoor activities",
     description:
-      '"The best holidays for me are in a tent in the middle of nowhere". I love nature and spending time in amazing landscapes. I enjoy going to mountains, hills, forests or non-popular beaches with my partner on weekends.',
+      "My ideal getaways? Camping out in the middle of nowhere. I'm a nature enthusiast who thrives on soaking up stunning landscapes. Weekends are all about venturing to mountains, hills, forests, or offbeat beaches with my partner.",
   },
   {
     icon: rock,
     alt: "Rock/Metal concerts",
-    description: `"I can't live without music!". Going to live concerts is one of my favorite activities. Actually, I like heavy metal but I enjoy every kind of rock style.`,
+    description: `"Music is my lifeline – I can't imagine living without it! One of my absolute favorite things to do is attend live concerts. While heavy metal is my jam, I'm a rock enthusiast at heart and appreciate every genre within the rock spectrum."`,
   },
   {
     icon: airsoft,
     alt: "Airsoft",
     description:
-      "Airsoft, my lovely freak sport (or more like a hobby). It combines teamwork, agility, adrenaline and outdoor adventure.",
+      "Airsoft, my beloved pastime (or rather, a cherished hobby). It's an exhilarating fusion of teamwork, agility, adrenaline, and the great outdoors. Stepping onto the field transports me into a world of camaraderie, where collaborating with fellow enthusiasts to achieve objectives becomes a captivating adventure.",
   },
   {
     icon: computer,
     alt: "Computers and hardware",
     description:
-      "What I really like are custom computers. Staying up to date with new technology and pc components and, of course, I always build my setups.",
+      "What truly excites me are custom-built computers. Keeping abreast of the latest technological advancements and PC components, I'm always hands-on in crafting my setups from scratch.",
   },
 ];
 
