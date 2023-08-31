@@ -20,7 +20,7 @@ function App() {
         <title>FRAN Web Dev</title>
         <meta
           name="description"
-          content="Full Stack Web Developer | React + Node + MySQL || UX & Industrial Designer"
+          content="Front-end Developer | React + Nextjs + Tailwind + Typescript || UX/UI & Industrial Designer"
         />
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="Franco Gabriel Amoroso" />
