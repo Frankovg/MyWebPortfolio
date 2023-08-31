@@ -1,15 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import TrackVisibility from "react-on-screen";
 import { Zoom } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
 
+//Context
+import { LinkContext } from "../../Context/LinkContext";
+
 //Components
 import ship from "../../assets/ship/ship.svg";
 import arrowDown from "../../assets/icons/arrow_down.svg";
 
-//Components
+//Hooks
+import useIntersectionObserver from "../../Hooks/useIntersectionObserver";
+
+//Styles
 import "./header.scss";
 
 export const Header = () => {
@@ -17,6 +23,15 @@ export const Header = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const { setActiveLink } = useContext(LinkContext);
+
+  const headerRef = useRef(null);
+  const entry = useIntersectionObserver(headerRef, {});
+  const isVisible = !!entry?.isIntersecting;
+
+  useEffect(() => {
+    if (isVisible) setActiveLink("home");
+  }, [isVisible]);
 
   const toRotate = [
     "Front-end Developer",
@@ -62,7 +77,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="banner" id="home">
+    <header className="banner" id="home" ref={headerRef}>
       <Container>
         <Row className="align-items-center">
           <Col xs={12} sm={12} lg={7}>
@@ -108,7 +123,7 @@ export const Header = () => {
           </Col>
 
           <Col xs={12} sm={12} className="arrow-down">
-            <a href="#tech-stack">
+            <a href="#tech-stack" onClick={() => setActiveLink("skills")}>
               <img src={arrowDown} alt="Arrow pointing down" />
             </a>
           </Col>

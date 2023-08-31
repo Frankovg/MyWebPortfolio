@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Slide } from "react-awesome-reveal";
 import TrackVisibility from "react-on-screen";
+
+//Context
+import { LinkContext } from "../../Context/LinkContext";
+
+//hooks
+import useIntersectionObserver from "../../Hooks/useIntersectionObserver";
 
 //Components
 import { ProjectCard } from "./ProjectCard/ProjectCard";
@@ -16,8 +22,17 @@ import industrialDesigns from "./DB/IndustrialDesign";
 import "./projects.scss";
 
 export const Projects = () => {
+  const { setActiveLink } = useContext(LinkContext);
+  const projectRef = useRef(null);
+  const entry = useIntersectionObserver(projectRef, {});
+  const isVisible = !!entry?.isIntersecting;
+
+  useEffect(() => {
+    if (isVisible) setActiveLink("projects");
+  }, [isVisible]);
+
   return (
-    <section className="project" id="project">
+    <section className="project" id="project" ref={projectRef}>
       <Container>
         <Row>
           <Col size={12}>

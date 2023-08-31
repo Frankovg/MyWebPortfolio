@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { HashLink } from "react-router-hash-link";
 
 //Components
@@ -9,6 +9,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../../assets/logo/logo.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
 import github from "../../assets/icons/github.svg";
+
+//Context
+import { LinkContext } from "../../Context/LinkContext";
 
 //Styles
 import "./navBar.scss";
@@ -56,8 +59,8 @@ const socialIcons = [
 ];
 
 export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const { activeLink, setActiveLink } = useContext(LinkContext);
 
   useEffect(() => {
     const onScroll = () => {
