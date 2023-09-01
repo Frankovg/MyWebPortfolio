@@ -189,7 +189,7 @@ const git = [
     name: "Gitlab",
     description:
       "A code hosting platform for collaboration and version control.",
-    position: "bottom",
+    position: "left",
     class: "gitlabH",
     icon: gitlabIcon,
   },

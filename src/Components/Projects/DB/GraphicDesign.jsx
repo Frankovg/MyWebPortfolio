@@ -75,7 +75,7 @@ const graphicDesigns = [
     repo: "",
     video: "",
     test: "",
-    pictures: ["digiart-ux.png", "uxui-1.png", "uxui-2.png"],
+    pictures: ["digiart-ux.png", "uxui-1.webp", "uxui-2.png"],
     client: "",
     company: "Freelancer",
     stack: "Photoshop, Illustrator, Figma, AdobeXD",

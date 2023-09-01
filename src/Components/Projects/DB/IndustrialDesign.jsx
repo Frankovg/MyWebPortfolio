@@ -99,7 +99,7 @@ const industrialDesigns = [
     video: "",
     test: "",
     pictures: [
-      "random-1.png",
+      "random-1.webp",
       "random-2.png",
       "random-3.png",
       "random-4.png",
